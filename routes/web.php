@@ -11,11 +11,25 @@
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+/**
+ * UI temporary routes
+ */
+
 Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/home', function () {
+Route::get('/feed', function () {
     return view('feed');
 });
 
+
+Route::resource('posts', PostController::class);
+Route::resource('posts.comments', PostCommentController::class);
