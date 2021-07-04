@@ -305,7 +305,7 @@ $(function() {
 	  });
 
     $('button.signin').on("click", function(){
-        location.href = "/home";
+        location.href = "/feed";
     });
 
     $('input.showPassword').on("click", function(){
