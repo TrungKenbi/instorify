@@ -11,9 +11,16 @@
 |
 */
 
+Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['web', 'auth'])->group(function () {
+    Route::resource('posts', PostController::class);
+    Route::resource('posts.comments', PostCommentController::class);
+});
+
+
 
 
 
@@ -22,14 +29,10 @@ Route::get('/home', 'HomeController@index')->name('home');
  * UI temporary routes
  */
 
-Route::get('/', function () {
-    return view('landing');
-});
+//Route::get('/', function () {
+//    return view('landing');
+//});
 
 Route::get('/feed', function () {
     return view('feed');
 });
-
-
-Route::resource('posts', PostController::class);
-Route::resource('posts.comments', PostCommentController::class);
