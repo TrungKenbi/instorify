@@ -65,7 +65,7 @@ $('.notification-box > ul li > i.del').on("click", function(){
 
 	function listFilter(searchDir, list) {
 	  var form = $("<form>").attr({"class":"filterform","action":"#"}),
-	  input = $("<input>").attr({"class":"filterinput","type":"text","placeholder":"Search Contacts..."});
+	  input = $("<input>").attr({"class":"filterinput","type":"text","placeholder":"Tìm kiếm bạn bè..."});
 	  $(form).append(input).appendTo(searchDir);
 
 	  $(input)
@@ -91,9 +91,9 @@ $('.notification-box > ul li > i.del').on("click", function(){
 	}(jQuery));
 
 //progress line for page loader
-	$('body').show();
-	NProgress.start();
-	setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 2000);
+// 	$('body').show();
+// 	NProgress.start();
+// 	setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 2000);
 
 //--- bootstrap tooltip
 	$(function () {
@@ -422,8 +422,31 @@ jQuery(".post-comt-box textarea").on("keydown", function(event) {
 		return false;
 	});
 
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 600) {
+            $('.scroll-top').removeClass('not-visible');
+        } else {
+            $('.scroll-top').addClass('not-visible');
+        }
+    });
+    $('.scroll-top').on('click', function (event) {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 1000);
+    });
 
-
+    //Like Post
+    $(document).ready(function(){
+        $("#likePost").click(function(){
+            if($("#likePost").hasClass("liked")){
+                $("#likePost").html('<i class="far fa-heart" aria-hidden="true"></i>');
+                $("#likePost").removeClass("liked");
+            }else{
+                $("#likePost").html('<i class="fas fa-heart" aria-hidden="true" style="color: red"></i>');
+                $("#likePost").addClass("liked");
+            }
+        });
+    });
 });//document ready end
 
 

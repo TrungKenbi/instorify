@@ -33,6 +33,10 @@ Route::middleware(['web', 'auth'])->group(function () {
 //    return view('landing');
 //});
 
-Route::get('/feed', function () {
+Route::get('/home', function () {
     return view('feed');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 });

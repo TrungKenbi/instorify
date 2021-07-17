@@ -228,7 +228,7 @@ textarea:focus {
 }
 
 .slick-arrow-style button.slick-arrow:hover {
-  color: #dc4734;
+  color: #5271ff;
 }
 
 .slick-track {
@@ -393,7 +393,7 @@ textarea:focus {
   -o-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
-  background-color: #dc4734;
+  background-color: #5271ff;
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
@@ -1469,6 +1469,7 @@ textarea:focus {
 
 .card-small {
   padding: 16px;
+    border-radius: 15px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -1553,7 +1554,7 @@ textarea:focus {
   line-height: 1;
   padding: 14px 30px 12px;
   border-radius: 40px;
-  background-color: #dc4734;
+  background-color: #5271ff;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -2147,7 +2148,7 @@ textarea:focus {
   height: 1px;
   content: "";
   position: absolute;
-  background-color: #dc4734;
+  background-color: #5271ff;
 }
 
 /*------- widget title end -------*/
@@ -2332,7 +2333,7 @@ textarea:focus {
   padding: 8px 20px;
   display: inline-block;
   border: 1px solid transparent;
-  background-color: #dc4734;
+  background-color: #5271ff;
 }
 
 @media only screen and (max-width: 575.98px) {
@@ -2397,7 +2398,7 @@ textarea:focus {
 .signup-inner .title {
   color: #fff;
   font-size: 18px;
-  background-color: #dc4734;
+  background-color: #5271ff;
   padding: 23px 0;
 }
 
@@ -2476,7 +2477,7 @@ textarea:focus {
 }
 
 .signup-inner .terms-condition a {
-  color: #dc4734;
+  color: #5271ff;
 }
 
 .submit-btn {
@@ -2554,7 +2555,7 @@ textarea:focus {
 }
 
 .login-area {
-  background-color: #dc4734;
+  background-color: #5271ff;
   padding: 15px 30px;
 }
 
@@ -2582,7 +2583,7 @@ textarea:focus {
 .login-area .login-btn {
   font-size: 14px;
   font-weight: 500;
-  color: #dc4734;
+  color: #5271ff;
   line-height: 1;
   padding: 12px 32px;
   display: inline-block;
@@ -3186,7 +3187,7 @@ textarea:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #dc4734;
+  background-color: #5271ff;
 }
 
 .frnd-search-title .frnd-search-icon,
@@ -3335,7 +3336,7 @@ textarea:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 25px;
-  background-color: #dc4734;
+  background-color: #5271ff;
 }
 
 .live-chat-title .author a {
@@ -3437,7 +3438,7 @@ textarea:focus {
   max-width: 210px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #e47263;
+  background-color: #5271ff;
   margin-left: auto;
 }
 
@@ -3469,7 +3470,7 @@ textarea:focus {
   width: 60px;
   height: 69px;
   line-height: 69px;
-  background-color: #dc4734;
+  background-color: #5271ff;
   text-align: center;
 }
 

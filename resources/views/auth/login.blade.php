@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instorify</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <!-- CSRF Token -->
@@ -12,7 +13,6 @@
 
     <link rel="stylesheet" href="/assets/css/main.min.css">
     <link rel="stylesheet" href="/assets/css/style_landing.css">
-    <link rel="stylesheet" href="/assets/css/color.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
 
 </head>

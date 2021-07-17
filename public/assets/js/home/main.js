@@ -9,7 +9,7 @@
 		var target = $this.attr('href');
 		$(target).slideToggle();
 		$($prevTartget).slideUp();
-		
+
     });
 
 	//Close When Click Outside
@@ -33,7 +33,7 @@
       	plyrAudio = new Plyr('.plyr-audio'),
       	plyrYoutube = new Plyr('.plyr-youtube'),
 		plyrVimeo = new Plyr('.plyr-vimeo');
-		  
+
     // active profile carousel js
 	$('.active-profile-carousel').slick({
         speed: 800,
@@ -99,12 +99,12 @@
 			$target = $this.data('close');
 		$('.'+$target).removeClass('show');
 	})
-	
+
 	// mobile header seach box active
 	$(".search-trigger").on('click', function(){
 		$('.search-trigger, .mob-search-box').toggleClass('show');
 	})
-	
+
 	$(".chat-trigger, .close-btn").on('click', function(){
 		$('.mobile-chat-box').toggleClass('show');
 	})
@@ -139,13 +139,13 @@
 
 	// light gallery active js
 	$(document).ready(function() {
-        $(".img-popup").lightGallery(); 
+        $(".img-popup").lightGallery();
 
 		// light gallery images
         $(".img-gallery").lightGallery({
 			selector: ".gallery-selector",
 			hash: false
-		}); 
+		});
 	});
 
 	$('.gallery-toggle').on('click', function () {
@@ -178,7 +178,7 @@
 			$(this).siblings('.active').removeClass('active');
 	         $(this).addClass('active');
 		});
-		
+
 	});
 
 	// nice select active js
@@ -202,6 +202,5 @@
 	$('#email').bind("cut copy paste",function(e) {
 		e.preventDefault();
 	});
-    
 })(jQuery);
 
