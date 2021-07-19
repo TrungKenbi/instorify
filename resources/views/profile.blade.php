@@ -38,7 +38,7 @@
                     <li>
                         <a class="active" href="#" title="" data-ripple="">Bài viết</a>
                         <a class="" href="#" title="" data-ripple="">Bạn bè</a>
-                        <a class="" href="#" title="" data-ripple="">Ảnh</a>
+                        <a class="" href="/profile_photos" title="" data-ripple="">Ảnh</a>
                         <a class="" href="#" title="" data-ripple="">Bài hát</a>
                         <a class="" href="#" title="" data-ripple="">Video</a>
                         <a name="edituser" class="edit-user-btn" href="/edituser" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
@@ -558,6 +558,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="lodmore"><button class="btn-view btn-load-more"></button></div>
                             </div>
                         </div>
                     </div>

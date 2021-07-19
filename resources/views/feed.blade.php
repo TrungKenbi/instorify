@@ -403,6 +403,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="lodmore"><button class="btn-view btn-load-more"></button></div>
                             </div>
                             <div class="col-lg-3">
                                 <aside class="sidebar static">
