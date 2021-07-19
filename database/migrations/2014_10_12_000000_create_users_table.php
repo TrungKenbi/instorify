@@ -36,6 +36,8 @@ class CreateUsersTable extends Migration
                 ->default('single');
             $table->text('bio')->nullable();
 
+            $table->boolean('is_admin')->default(false);
+
             $table->timestamps();
         });
     }
