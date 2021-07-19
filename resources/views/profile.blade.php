@@ -4,7 +4,7 @@
 <section style="background-color: white">
     <div class="feature-photo">
         <figure><img src="/assets/img/landing.png" alt=""></figure>
-        <form class="edit-phto">
+        <form class="edit-phto" style="width: 200px">
             <i class="fa fa-camera-retro"></i>
             <label class="fileContainer">
                 Chỉnh sửa ảnh bìa
@@ -20,7 +20,7 @@
                         <img src="/assets/img/avartar.png" alt="">
                     </figure>
                 </div>
-                <form class="edit-avatar">
+                <form class="edit-avatar" style="margin-top: -30px">
                     <label class="fileContainer">
                         <i class="fa fa-camera-retro" style="font-size: 30px"></i>
                         <input type="file" accept="image/png, image/jpeg, image/jpg"/>
@@ -37,60 +37,9 @@
                             <a class="active" href="#" title="" data-ripple="">Bài viết</a>
                             <a class="" href="#" title="" data-ripple="">Bạn bè</a>
                             <a class="" href="#" title="" data-ripple="">Ảnh</a>
+                            <a class="" href="#" title="" data-ripple="">Bài hát</a>
                             <a class="" href="#" title="" data-ripple="">Video</a>
                             <a name="edituser" class="edit-user-btn" href="/edituser" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
-
-                            <!-- Modal start -->
-                            <div class="modal fade" id="textbox-edit" aria-labelledby="textbox">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Tạo bài viết</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body custom-scroll">
-                                            <form>
-                                                <textarea name="share" class="share-field-big custom-scroll" id="editor" placeholder="Bạn đang nghĩ gì?"></textarea>
-                                                <div class="attachments">
-                                                    <ul>
-                                                        <li>
-                                                            <i class="fas fa-photo-video" style="color: #5271ff"></i>
-                                                            <label class="fileContainer">
-                                                                <input type="file" accept="image/png, image/jpg, image/jpeg, video/mp4">
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-music" style="color: #5271ff"></i>
-                                                            <label class="fileContainer">
-                                                                <input type="file" accept="audio/mp3">
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-video-camera"></i>
-                                                            <label class="fileContainer">
-                                                                <input type="file">
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-camera"></i>
-                                                            <label class="fileContainer">
-                                                                <input type="file">
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="post-share-btn" data-dismiss="modal">cancel</button>
-                                            <button type="button" class="post-share-btn">post</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Modal end -->
                         </li>
                     </ul>
                 </div>
@@ -613,4 +562,6 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
 @endsection
