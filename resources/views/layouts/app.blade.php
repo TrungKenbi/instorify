@@ -43,10 +43,14 @@
 
 <body>
 
+<!-- ========== HEADER ========== -->
 @include('layouts.header')
 
 <!-- ========== BODY ========== -->
 @yield('content')
+
+<!-- ========== FOOTER ========== -->
+@include('layouts.footer')
 
 <div class="scroll-top not-visible">
     <i class="fas fa-arrow-alt-circle-up"></i>
