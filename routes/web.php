@@ -56,3 +56,7 @@ Route::get('/notifications', function () {
 Route::get('/profile_photos', function () {
     return view('profile_photos');
 });
+
+Route::get('/profile_videos', function () {
+    return view('profile_videos');
+});
