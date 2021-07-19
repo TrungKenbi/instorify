@@ -40,3 +40,7 @@ Route::get('/home', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/edituser', function () {
+    return view('edituser');
+});
