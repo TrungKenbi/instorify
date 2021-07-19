@@ -27,22 +27,23 @@
                     </label>
                 </form>
             </div>
-            <div class="user-info">
-                <h3>Minh Hiếu</h3>
-            </div>
-            <div class="col-lg-10 col-sm-9">
-                <div class="timeline-info">
-                    <ul>
-                        <li>
-                            <a class="active" href="#" title="" data-ripple="">Bài viết</a>
-                            <a class="" href="#" title="" data-ripple="">Bạn bè</a>
-                            <a class="" href="#" title="" data-ripple="">Ảnh</a>
-                            <a class="" href="#" title="" data-ripple="">Bài hát</a>
-                            <a class="" href="#" title="" data-ripple="">Video</a>
-                            <a name="edituser" class="edit-user-btn" href="/edituser" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
-                        </li>
-                    </ul>
-                </div>
+        </div>
+        <div class="user-info">
+            <h3>Minh Hiếu</h3>
+            <p id="profile-story">Rảnh rỗi sinh nông nổi</p>
+        </div>
+        <div class="col-lg-10 col-sm-9">
+            <div class="timeline-info">
+                <ul>
+                    <li>
+                        <a class="active" href="#" title="" data-ripple="">Bài viết</a>
+                        <a class="" href="#" title="" data-ripple="">Bạn bè</a>
+                        <a class="" href="#" title="" data-ripple="">Ảnh</a>
+                        <a class="" href="#" title="" data-ripple="">Bài hát</a>
+                        <a class="" href="#" title="" data-ripple="">Video</a>
+                        <a name="edituser" class="edit-user-btn" href="/edituser" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -302,7 +303,7 @@
                                             </div>
 
                                             <!-- MUSIC PART -->
-                                            <div class="post-meta music">
+                                            <div class="post-meta music" style="width: 684px">
                                                 <div id="player-content">
                                                     <div id="album-art">
                                                         <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
@@ -332,19 +333,19 @@
                                             <div class="we-video-info">
                                                 <ul>
                                                     <li>
-															<span class="like" id="likePost" data-toggle="tooltip" title="Like">
-																<i class="far fa-heart"></i>
-															</span>
+                                                        <span class="like" id="likePost" data-toggle="tooltip" title="Like">
+                                                            <i class="far fa-heart"></i>
+                                                        </span>
                                                     </li>
                                                     <li>
-															<span class="comment" data-toggle="tooltip" title="Comments">
-																<i class="far fa-comment-alt"></i>
-															</span>
+                                                        <span class="comment" data-toggle="tooltip" title="Comments">
+                                                            <i class="far fa-comment-alt"></i>
+                                                        </span>
                                                     </li>
                                                     <li>
-															<span class="share" data-toggle="tooltip" title="Share">
-																<i class="fas fa-share-alt"></i>
-															</span>
+                                                        <span class="share" data-toggle="tooltip" title="Share">
+                                                            <i class="fas fa-share-alt"></i>
+                                                        </span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -356,10 +357,11 @@
                                                     <li style="margin-left: -40px">Lượt chia sẻ</li>
                                                 </ul>
                                             </div>
-                                            <hr style="margin-top: 540px; width: 96%">
+
 
                                             <!-- COMMENT PART -->
                                             <div class="coment-area">
+                                                <hr style="width: 96%; margin-top: -10px">
                                                 <ul class="we-comet">
                                                     <li>
                                                         <div class="comet-avatar">
@@ -459,19 +461,19 @@
                                             <div class="we-video-info">
                                                 <ul>
                                                     <li>
-															<span class="like" id="likePost" data-toggle="tooltip" title="Like">
-																<i class="far fa-heart"></i>
-															</span>
+                                                        <span class="like" id="likePost" data-toggle="tooltip" title="Like">
+                                                            <i class="far fa-heart"></i>
+                                                        </span>
                                                     </li>
                                                     <li>
-															<span class="comment" data-toggle="tooltip" title="Comments">
-																<i class="far fa-comment-alt"></i>
-															</span>
+                                                        <span class="comment" data-toggle="tooltip" title="Comments">
+                                                            <i class="far fa-comment-alt"></i>
+                                                        </span>
                                                     </li>
                                                     <li>
-															<span class="share" data-toggle="tooltip" title="Share">
-																<i class="fas fa-share-alt"></i>
-															</span>
+                                                        <span class="share" data-toggle="tooltip" title="Share">
+                                                            <i class="fas fa-share-alt"></i>
+                                                        </span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -483,10 +485,10 @@
                                                     <li style="margin-left: -40px">Lượt chia sẻ</li>
                                                 </ul>
                                             </div>
-                                            <hr style="margin-top: 470px; width: 96%">
 
                                             <!-- COMMENT PART -->
                                             <div class="coment-area">
+                                                <hr style="margin-top: -10px; width: 96%">
                                                 <ul class="we-comet">
                                                     <li>
                                                         <div class="comet-avatar">

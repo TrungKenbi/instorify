@@ -786,7 +786,7 @@ header.sticky {
     box-shadow: 0 1px 0 #e1e8ed;
     float: left;
     margin-top: -168px;
-    margin-left: 630px;
+    margin-left: 615px;
     overflow: hidden;
     position: relative;
     width: 250px;
@@ -4118,7 +4118,7 @@ a.forgot-pwd {
 }
 
 .people-name > i {
-    background: lightcoral none repeat scroll 0 0;
+    background: #5271ff none repeat scroll 0 0;
     border-radius: 3px;
     color: #fff;
     display: inline-block;
@@ -4181,9 +4181,10 @@ a.forgot-pwd {
     vertical-align: top;
     width: 75%;
     padding: 5px 8px;
-    position: relative;
+    position: inherit;
     color: #434343;
     background: rgba(39, 170, 225, 0.1);
+    border-radius: 15px;
 }
 
 .peoples-mesg-box > ul > li p::before {
@@ -4264,14 +4265,14 @@ a.forgot-pwd {
 }
 
 .message-text-container textarea {
-    border-radius: 0;
+    border-radius: 15px;
     box-sizing: content-box;
     color: #7f7f7f;
-    height: 50px;
+    height: 25px;
     overflow: hidden;
     resize: none;
     display: inline-block;
-    width: 93.5%;
+    width: 90%;
 }
 
 .message-text-container > form {
@@ -10444,7 +10445,7 @@ span.offline{
 
 .user-info{
     text-align: center;
-    margin-top: 55px;
+    margin-top: -10px;
 }
 
 .user-info h3{
@@ -10474,5 +10475,9 @@ span.offline{
     width: 50px;
     height: 50px;
     border-radius: 10px;
+}
+
+.author:hover{
+    color: #5271ff;
 }
 

@@ -67,7 +67,7 @@
                                             </li>
                                         </ul>
                                         <ul id="all-message">
-                                            <a href="#" style="text-decoration: none; font-size: 14px">Xem tất cả Tin Nhắn</a>
+                                            <a href="/messages" style="text-decoration: none; font-size: 14px">Xem tất cả Tin Nhắn</a>
                                         </ul>
                                     </div>
                                 </li>

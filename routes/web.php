@@ -44,3 +44,7 @@ Route::get('/profile', function () {
 Route::get('/edituser', function () {
     return view('edituser');
 });
+
+Route::get('/messages', function () {
+    return view('messages');
+});
