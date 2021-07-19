@@ -27,24 +27,6 @@
                     </label>
                 </form>
             </div>
-<<<<<<< HEAD
-            <div class="container-fluid">
-                <div class="row merged">
-                    <div class="col-lg-2 col-sm-3">
-                        <div class="user-avatar">
-                            <figure>
-                                <img src="/assets/img/avartar.png" alt="">
-                            </figure>
-                        </div>
-                        <form class="edit-avatar">
-                            <label class="fileContainer">
-                                <i class="fa fa-camera-retro" style="font-size: 30px"></i>
-                                <input type="file" accept="image/png, image/jpeg, image/jpg"/>
-                            </label>
-                        </form>
-                    </div>
-                </div>
-            </div>
             <div class="user-info">
                 <h3>Minh Hiếu</h3>
             </div>
@@ -106,75 +88,13 @@
                                             <button type="button" class="post-share-btn">post</button>
                                         </div>
                                     </div>
-=======
-        </div>
-    </div>
-    <div class="user-info">
-        <h3>Minh Hiếu</h3>
-    </div>
-    <div class="col-lg-10 col-sm-9">
-        <div class="timeline-info">
-            <ul>
-                <li>
-                    <a class="active" href="#" title="" data-ripple="">Bài viết</a>
-                    <a class="" href="#" title="" data-ripple="">Bạn bè</a>
-                    <a class="" href="#" title="" data-ripple="">Ảnh</a>
-                    <a class="" href="#" title="" data-ripple="">Video</a>
-                    <a class="edit-user-btn" href="#" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
-                    <!-- Modal start -->
-                    <div class="modal fade" id="textbox-edit" aria-labelledby="textbox">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Tạo bài viết</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
->>>>>>> e4f9ca04aec495cab7b4d4839a1e2926a22dc693
-                                </div>
-                                <div class="modal-body custom-scroll">
-                                    <form>
-                                        <textarea name="share" class="share-field-big custom-scroll" id="editor" placeholder="Bạn đang nghĩ gì?"></textarea>
-                                        <div class="attachments">
-                                            <ul>
-                                                <li>
-                                                    <i class="fas fa-photo-video" style="color: #5271ff"></i>
-                                                    <label class="fileContainer">
-                                                        <input type="file" accept="image/png, image/jpg, image/jpeg, video/mp4">
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-music" style="color: #5271ff"></i>
-                                                    <label class="fileContainer">
-                                                        <input type="file" accept="audio/mp3">
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-video-camera"></i>
-                                                    <label class="fileContainer">
-                                                        <input type="file">
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-camera"></i>
-                                                    <label class="fileContainer">
-                                                        <input type="file">
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="post-share-btn" data-dismiss="modal">cancel</button>
-                                    <button type="button" class="post-share-btn">post</button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Modal end -->
-                </li>
-            </ul>
+                            <!-- Modal end -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -693,7 +613,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
 
         <footer>
             <div class="container">
@@ -769,38 +688,4 @@
                 </div>
             </div>
         </footer><!-- footer -->
-
-        <!-- ============================================ JS ============================================ -->
-        <!-- Modernizer JS -->
-        <script src="/assets/js/home/vendor/modernizr-3.6.0.min.js"></script>
-        <!-- jQuery JS -->
-        <script src="/assets/js/home/vendor/jquery-3.3.1.min.js"></script>
-        <!-- Popper JS -->
-        <script src="/assets/js/home/vendor/popper.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="/assets/js/home/vendor/bootstrap.min.js"></script>
-        <!-- Slick Slider JS -->
-        <script src="/assets/js/home/plugins/slick.min.js"></script>
-        <!-- nice select JS -->
-        <script src="/assets/js/home/plugins/nice-select.min.js"></script>
-        <!-- audio video player JS -->
-        <script src="/assets/js/home/plugins/plyr.min.js"></script>
-        <!-- perfect scrollbar js -->
-        <script src="/assets/js/home/plugins/perfect-scrollbar.min.js"></script>
-        <!-- light gallery js -->
-        <script src="/assets/js/home/plugins/lightgallery-all.min.js"></script>
-        <!-- image loaded js -->
-        <script src="/assets/js/home/plugins/imagesloaded.pkgd.min.js"></script>
-        <!-- isotope filter js -->
-        <script src="/assets/js/home/plugins/isotope.pkgd.min.js"></script>
-        <!-- Main JS -->
-        <script src="/assets/js/home/main.js"></script>
-        <script src="/assets/js/script.js"></script>
-        <script src="/assets/js/music.js"></script>
-    </body>
-</html>
-=======
-    </div>
-</section>
 @endsection
->>>>>>> e4f9ca04aec495cab7b4d4839a1e2926a22dc693

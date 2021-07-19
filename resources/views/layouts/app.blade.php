@@ -32,7 +32,10 @@
     <link rel="stylesheet" href="/assets/css/home/plugins/lightgallery.min.css">
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="/assets/css/home/style.css">
+    <link rel="stylesheet" href="/assets/css/main.min.css">
     <link rel="stylesheet" href="/assets/css/style_landing.css">
+    <link rel="stylesheet" href="/assets/css/color.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
 
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
 

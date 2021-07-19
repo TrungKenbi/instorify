@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section style="padding-top: 100px">
+    <section style="padding-top: 100px">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -472,9 +472,10 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+    </div>
+</section>
 
-        <footer>
+    <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
@@ -548,38 +549,5 @@
                 </div>
             </div>
         </footer><!-- footer -->
-
-    <!-- ============================================ JS ============================================ -->
-        <!-- Modernizer JS -->
-        <script src="/assets/js/home/vendor/modernizr-3.6.0.min.js"></script>
-        <!-- jQuery JS -->
-        <script src="/assets/js/home/vendor/jquery-3.3.1.min.js"></script>
-        <!-- Popper JS -->
-        <script src="/assets/js/home/vendor/popper.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="/assets/js/home/vendor/bootstrap.min.js"></script>
-        <!-- Slick Slider JS -->
-        <script src="/assets/js/home/plugins/slick.min.js"></script>
-        <!-- nice select JS -->
-        <script src="/assets/js/home/plugins/nice-select.min.js"></script>
-        <!-- audio video player JS -->
-        <script src="/assets/js/home/plugins/plyr.min.js"></script>
-        <!-- perfect scrollbar js -->
-        <script src="/assets/js/home/plugins/perfect-scrollbar.min.js"></script>
-        <!-- light gallery js -->
-        <script src="/assets/js/home/plugins/lightgallery-all.min.js"></script>
-        <!-- image loaded js -->
-        <script src="/assets/js/home/plugins/imagesloaded.pkgd.min.js"></script>
-        <!-- isotope filter js -->
-        <script src="/assets/js/home/plugins/isotope.pkgd.min.js"></script>
-        <!-- Main JS -->
-        <script src="/assets/js/home/main.js"></script>
-        <script src="/assets/js/script.js"></script>
-        <script src="/assets/js/music.js"></script>
-    </body>
-</html>
-=======
-    </div>
-</section>
 @endsection
->>>>>>> e4f9ca04aec495cab7b4d4839a1e2926a22dc693
+
