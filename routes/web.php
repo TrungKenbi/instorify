@@ -48,3 +48,7 @@ Route::get('/edituser', function () {
 Route::get('/messages', function () {
     return view('messages');
 });
+
+Route::get('/notifications', function () {
+    return view('notifications');
+});

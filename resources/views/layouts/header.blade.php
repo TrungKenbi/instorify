@@ -128,7 +128,7 @@
                                             </li>
                                         </ul>
                                         <ul id="all-notification">
-                                            <a href="#" style="text-decoration: none; font-size: 14px">Xem tất cả Thông Báo</a>
+                                            <a href="/notifications" style="text-decoration: none; font-size: 14px">Xem tất cả Thông Báo</a>
                                         </ul>
                                     </div>
                                 </li>
