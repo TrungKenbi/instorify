@@ -27,6 +27,10 @@ class CreateUsersTable extends Migration
             $table->date('dob')->useCurrent(); // Day of birth
             $table->enum('gender', ['male', 'female', 'unisex'])
                 ->default('unisex');
+
+            $table->string('avatar')->nullable();
+            $table->string('cover')->nullable();
+
             $table->text('home_town')->nullable();
             $table->enum('relationship_status', ['single', 'in_relationship', 'married'])
                 ->default('single');
