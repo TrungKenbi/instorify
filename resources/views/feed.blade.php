@@ -9,9 +9,100 @@
                         <div class="row" id="page-content">
                             <div class="col-lg-3 left-bar">
                                 <aside class="sidebar static">
-                                    <div class="widget">
+                                    <div class="widget" style="padding-bottom: 40px">
                                         <h4 class="widget-title">Gợi ý kết bạn</h4>
-
+                                        <ul class="followers" style="margin-top: -30px">
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                            <!--Gợi ý kết bạn-->
+                                            <li style="margin-top: 20px">
+                                                <figure><img src="/assets/img/avartar.png" alt=" " style="width: 100%; margin-left: -0px"></figure>
+                                                <div class="friend-meta">
+                                                    <h4><a href="time-line.html" title="">Dương Lê Phước Trung</a></h4>
+                                                    <a href="#" title="" class="underline">Bình Phước</a>
+                                                </div>
+                                                <div style="margin-left: 200px; margin-top: -50px"><button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button></div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </aside>
                             </div>
