@@ -288,11 +288,10 @@
 
                                                 <!-- POST IMAGE -->
                                                 <div class="post-meta">
-                                                    <iframe width="900" height="400"
-                                                            src="https://www.youtube.com/embed/be5yMhqtdyQ"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen></iframe>
+                                                    <video id="VisaChipCardVideo" style="width: 650px" controls>
+                                                        <source src="/assets/videos/sample.mp4" type="video/mp4">
+                                                        <!--Browser does not support ok<video> tag -->
+                                                    </video>
                                                 </div>
 
                                                 <!-- LIKE, SHARE, COMMENT BUTTON PART -->
