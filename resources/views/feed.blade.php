@@ -70,27 +70,13 @@
                                                                             <input type="file" accept="audio/mp3">
                                                                         </label>
                                                                     </li>
-                                                                    <li>
-                                                                        <i class="fa fa-video-camera"></i>
-                                                                        <label class="fileContainer">
-                                                                            <input type="file">
-                                                                        </label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i class="fa fa-camera"></i>
-                                                                        <label class="fileContainer">
-                                                                            <input type="file">
-                                                                        </label>
-                                                                    </li>
                                                                 </ul>
                                                             </div>
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="post-share-btn" data-dismiss="modal">
-                                                            cancel
-                                                        </button>
-                                                        <button type="button" class="post-share-btn">post</button>
+                                                        <button type="button" class="post-share-btn" data-dismiss="modal">Huỷ</button>
+                                                        <button type="button" class="post-share-btn">Đăng</button>
                                                     </div>
                                                 </div>
                                             </div>
