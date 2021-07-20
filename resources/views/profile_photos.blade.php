@@ -203,43 +203,55 @@
                                 <div class="central-meta">
                                     <ul class="photos">
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
                                         <li>
-                                            <a class="strip" href="/assets/img/sample_ava1.jpg" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-                                                <img src="/assets/img/sample_ava1.jpg" alt="" style="border-radius: 10px; width: 230px; height: 230px"></a>
+                                            <div class="images strip">
+                                                <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" style="width: 230px; height: 230px; border-radius: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px">
+                                            </div>
                                         </li>
+                                        <div id="image-viewer">
+                                            <span class="close">&times;</span>
+                                            <img class="modal-content" id="full-image">
+                                        </div>
                                     </ul>
-                                    <div class="lodmore"><button class="btn-view btn-load-more"></button></div>
                                 </div><!-- photos -->
                             </div>
                         </div>
