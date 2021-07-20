@@ -21,6 +21,11 @@ class PostsTableSeeder extends Seeder
             'content' => "Hôm nay trời nhẹ lên cao cao quá cao",
         ];
 
+        $posts[] = [
+            'user_id' => '1',
+            'content' => "Baby I'm right here",
+        ];
+
         foreach ($posts as $post)
             Post::create($post);
     }
