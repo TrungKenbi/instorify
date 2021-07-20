@@ -208,7 +208,7 @@
                                 <div class="central-meta">
                                     <div class="musics">
                                         <!--Music here-->
-                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px">
+                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px; margin-top: 30px">
                                             <div id="player-content">
                                                 <div id="album-art">
                                                     <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
@@ -234,7 +234,7 @@
                                             </div>
                                         </div>
                                         <!--Music here-->
-                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px">
+                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px; margin-top: 30px">
                                             <div id="player-content">
                                                 <div id="album-art">
                                                     <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
@@ -260,7 +260,7 @@
                                             </div>
                                         </div>
                                         <!--Music here-->
-                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px">
+                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px; margin-top: 30px">
                                             <div id="player-content">
                                                 <div id="album-art">
                                                     <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
@@ -286,7 +286,7 @@
                                             </div>
                                         </div>
                                         <!--Music here-->
-                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px">
+                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px; margin-top: 30px">
                                             <div id="player-content">
                                                 <div id="album-art">
                                                     <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
@@ -312,7 +312,7 @@
                                             </div>
                                         </div>
                                         <!--Music here-->
-                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px">
+                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px; margin-top: 30px">
                                             <div id="player-content">
                                                 <div id="album-art">
                                                     <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
@@ -338,7 +338,7 @@
                                             </div>
                                         </div>
                                         <!--Music here-->
-                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px">
+                                        <div class="post-meta music" style="width: 684px; margin-bottom: 20px; margin-top: 30px">
                                             <div id="player-content">
                                                 <div id="album-art">
                                                     <img src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
