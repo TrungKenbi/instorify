@@ -10498,7 +10498,7 @@ span.offline{
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
     max-width: 700px;
 }
 .modal-content {
@@ -10535,3 +10535,50 @@ span.offline{
     transform: scale(1.01);
 }
 
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+#light {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 800px;
+    max-height: 500px;
+    margin-left: -690px;
+    margin-top: -1200px;
+    z-index: 1002;
+    overflow: visible;
+}
+
+#fade:hover ~ #boxclose {
+    display:none;
+}
+
+.friend button{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: -20px;
+}
+
+.friend i{
+    color: #5271ff;
+}
+
+.edit-user button{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -70,27 +70,13 @@
                                                                             <input type="file" accept="audio/mp3">
                                                                         </label>
                                                                     </li>
-                                                                    <li>
-                                                                        <i class="fa fa-video-camera"></i>
-                                                                        <label class="fileContainer">
-                                                                            <input type="file">
-                                                                        </label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i class="fa fa-camera"></i>
-                                                                        <label class="fileContainer">
-                                                                            <input type="file">
-                                                                        </label>
-                                                                    </li>
                                                                 </ul>
                                                             </div>
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="post-share-btn" data-dismiss="modal">
-                                                            cancel
-                                                        </button>
-                                                        <button type="button" class="post-share-btn">post</button>
+                                                        <button type="button" class="post-share-btn" data-dismiss="modal">Huỷ</button>
+                                                        <button type="button" class="post-share-btn">Đăng</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -288,11 +274,10 @@
 
                                                 <!-- POST IMAGE -->
                                                 <div class="post-meta">
-                                                    <iframe width="900" height="400"
-                                                            src="https://www.youtube.com/embed/be5yMhqtdyQ"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen></iframe>
+                                                    <video id="VisaChipCardVideo" style="width: 650px" controls>
+                                                        <source src="/assets/videos/sample.mp4" type="video/mp4">
+                                                        <!--Browser does not support ok<video> tag -->
+                                                    </video>
                                                 </div>
 
                                                 <!-- LIKE, SHARE, COMMENT BUTTON PART -->

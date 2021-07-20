@@ -41,7 +41,12 @@
                         <a class="" href="/profile_photos" title="" data-ripple="">Ảnh</a>
                         <a class="" href="#" title="" data-ripple="">Bài hát</a>
                         <a class="" href="/profile_videos" title="" data-ripple="">Video</a>
-                        <a name="edituser" class="edit-user-btn" href="/edituser" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
+                        <a name="edituser" class="edit-user" href="/edituser" title="" data-ripple=""><button><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</button></a>
+                    </li>
+                    <li class="friend">
+                        <a name="add_friend" href="#" ><button><i class="fas fa-user-plus"></i> Kết bạn</button></a>
+                        <a name="friend" href="#" hidden><button><i class="fas fa-user-times" style="color: red"></i> Huỷ kết bạn</button></a>
+                        <a name="inbox" href="#" ><button><i class="fab fa-facebook-messenger"></i> Nhắn tin</button></a>
                     </li>
                 </ul>
             </div>
@@ -248,25 +253,13 @@
                                                                         <input type="file" accept="audio/mp3">
                                                                     </label>
                                                                 </li>
-                                                                <li>
-                                                                    <i class="fa fa-video-camera"></i>
-                                                                    <label class="fileContainer">
-                                                                        <input type="file">
-                                                                    </label>
-                                                                </li>
-                                                                <li>
-                                                                    <i class="fa fa-camera"></i>
-                                                                    <label class="fileContainer">
-                                                                        <input type="file">
-                                                                    </label>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </form>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="post-share-btn" data-dismiss="modal">cancel</button>
-                                                    <button type="button" class="post-share-btn">post</button>
+                                                    <button type="button" class="post-share-btn" data-dismiss="modal">Huỷ</button>
+                                                    <button type="button" class="post-share-btn">Đăng</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -454,7 +447,10 @@
 
                                             <!-- POST IMAGE -->
                                             <div class="post-meta">
-                                                <iframe width="900" height="400" src="https://www.youtube.com/embed/be5yMhqtdyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <video id="VisaChipCardVideo" style="width: 685px" controls>
+                                                    <source src="/assets/videos/sample.mp4" type="video/mp4">
+                                                    <!--Browser does not support ok<video> tag -->
+                                                </video>
                                             </div>
 
                                             <!-- LIKE, SHARE, COMMENT BUTTON PART -->
