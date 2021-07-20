@@ -60,3 +60,10 @@ Route::get('/profile_photos', function () {
 Route::get('/profile_videos', function () {
     return view('profile_videos');
 });
+
+Route::get('/profile_music', function () {
+    return view('profile_music');
+});
+Route::get('/profile_friends', function () {
+    return view('profile_friends');
+});

@@ -37,9 +37,9 @@
                 <ul>
                     <li>
                         <a class="active" href="/profile" title="" data-ripple="">Bài viết</a>
-                        <a class="" href="#" title="" data-ripple="">Bạn bè</a>
+                        <a class="" href="/profile_friends" title="" data-ripple="">Bạn bè</a>
                         <a class="" href="/profile_photos" title="" data-ripple="">Ảnh</a>
-                        <a class="" href="#" title="" data-ripple="">Bài hát</a>
+                        <a class="" href="/profile_music" title="" data-ripple="">Bài hát</a>
                         <a class="" href="/profile_videos" title="" data-ripple="">Video</a>
                         <a name="edituser" class="edit-user" href="/edituser" title="" data-ripple=""><button><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</button></a>
                     </li>

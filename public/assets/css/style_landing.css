@@ -3394,6 +3394,7 @@ nav.breadcrumb {
     padding: 20px;
     width: 100%;
     transition: all 0.15s linear 0s;
+    border-radius: 10px;
 }
 
 .nearby-contct > li:last-child {
@@ -3413,6 +3414,7 @@ nav.breadcrumb {
 .nearly-pepls > figure {
     display: inline-block;
     margin-bottom: 0;
+    margin-top: -7px;
     max-width: 60px;
     min-width: 60px;
     vertical-align: middle;
@@ -3425,6 +3427,7 @@ nav.breadcrumb {
     position: relative;
     vertical-align: middle;
     width: 88%;
+    margin-top: -8px;
 }
 
 .pepl-info > h4 {
@@ -10578,6 +10581,21 @@ span.offline{
 }
 
 .edit-user button{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.music{
+    margin-top: 30px;
+}
+
+.unfriend{
+    margin-left: 500px;
+    margin-top: -50px;
+}
+
+.unfriend button{
     border: 1px solid lightgrey;
     border-radius: 10px;
     padding: 10px;
