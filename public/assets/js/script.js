@@ -456,6 +456,30 @@ jQuery(".post-comt-box textarea").on("keydown", function(event) {
     $("#image-viewer .close").click(function(){
         $('#image-viewer').hide();
     });
+
+    /*
+    $(window).scroll(function(e){
+        var $el = $('.left-bar');
+        var isPositionFixed = ($el.css('position') == 'fixed');
+        if ($(this).scrollTop() > 200 && !isPositionFixed){
+            $el.css({'position': 'fixed', 'top': '0px'});
+        }
+        if ($(this).scrollTop() < 200 && isPositionFixed){
+            $el.css({'position': 'static', 'top': '0px'});
+        }
+    });
+
+    $(window).scroll(function(e){
+        var $el = $('.right-bar');
+        var isPositionFixed = ($el.css('position') == 'fixed');
+        if ($(this).scrollTop() > 200 && !isPositionFixed){
+            $el.css({'position': 'fixed', 'top': '0px', 'float': 'right'});
+        }
+        if ($(this).scrollTop() < 200 && isPositionFixed){
+            $el.css({'position': 'static', 'top': '0px'});
+        }
+    });
+    */
 });//document ready end
 
 //Play Video

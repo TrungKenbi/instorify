@@ -4776,7 +4776,7 @@ canvas {
 
 .chat-box {
     background: #fbfbfb none repeat scroll 0 0;
-    border-radius: 3px;
+    border-radius: 10px;
     bottom: -2px;
     position: absolute;
     right: 100%;
@@ -4802,6 +4802,8 @@ canvas {
     padding: 10px 20px 10px 30px;
     position: relative;
     width: 100%;
+    background-color: #5271ff;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .chat-list > ul > li {
@@ -4927,13 +4929,14 @@ canvas {
 
 .text-box {
     position: relative;
+    width: 230px;
 }
 
 .text-box > textarea {
     font-size: 14px;
     height: 50px;
     line-height: 27px;
-    border-radius: 0;
+    border-radius: 10px;
     background: #f0f0f0;
 }
 
@@ -4942,7 +4945,7 @@ canvas {
     position: absolute;
     right: 0;
     top: 0;
-    visibility: hidden;
+    visibility: visible;
 }
 
 
@@ -5402,6 +5405,7 @@ canvas {
     text-align: center;
     width: 100%;
     position: relative;
+    margin-top: 110px;
 }
 
 .chat-users {
@@ -5445,6 +5449,7 @@ canvas {
 
 .chat-friendz .chat-box {
     bottom: -40px;
+    margin-right: 20px;
 }
 
 .menu-left {
@@ -10599,4 +10604,21 @@ span.offline{
     border: 1px solid lightgrey;
     border-radius: 10px;
     padding: 10px;
+}
+
+.send-message{
+    margin-left: 245px;
+    margin-top: -42px;
+}
+
+.right-bar{
+    height: 100vh;
+    left: auto;
+    right: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: fixed;
+    top: 91px;
+    width: 500px;
+    z-index: 9;
 }

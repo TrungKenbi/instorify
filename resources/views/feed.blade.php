@@ -7,15 +7,15 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row" id="page-content">
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 left-bar">
                                 <aside class="sidebar static">
                                     <div class="widget">
-                                        <h4 class="widget-title">Shortcuts</h4>
+                                        <h4 class="widget-title">Gợi ý kết bạn</h4>
 
                                     </div>
                                 </aside>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 center-bar">
                                 <!-- share box start -->
                                 <div class="card card-small">
                                     <div class="share-box-inner">
@@ -390,7 +390,7 @@
                                 </div>
                                 <div class="lodmore"><button class="btn-view btn-load-more"></button></div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 right-bar">
                                 <aside class="sidebar static">
                                     <div class="widget friend-list stick-widget">
                                         <h4 class="widget-title">Người liên hệ</h4>
@@ -445,6 +445,71 @@
                                         </ul>
                                     </div>
                                 </aside>
+                                <div class="chat-friendz">
+                                    <div class="chat-box">
+                                        <div class="chat-head">
+                                            <span class="status f-online"></span>
+                                            <h6>Dương Lê Phước Trung</h6>
+                                            <div class="more">
+                                                <span class="close-mesage"><i class="fas fa-times" style="color: lightgrey"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="chat-list">
+                                            <ul>
+                                                <li class="me">
+                                                    <div class="chat-thumb"><img src="/assets/img/sample_ava1.jpg" alt=""></div>
+                                                    <div class="notification-event">
+                                                        <span class="chat-message-item">
+                                                            Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
+                                                        </span>
+                                                        <span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Hôm qua lúc 8:10pm</time></span>
+                                                    </div>
+                                                </li>
+                                                <li class="you">
+                                                    <div class="chat-thumb"><img src="/assets/img/avartar.png" alt=""></div>
+                                                    <div class="notification-event">
+                                                        <span class="chat-message-item">
+                                                            Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
+                                                        </span>
+                                                        <span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Hôm qua lúc 8:10pm</time></span>
+                                                    </div>
+                                                </li>
+                                                <li class="me">
+                                                    <div class="chat-thumb"><img src="/assets/img/sample_ava1.jpg" alt=""></div>
+                                                    <div class="notification-event">
+                                                        <span class="chat-message-item">
+                                                            Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
+                                                        </span>
+                                                        <span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Hôm qua lúc 8:10pm</time></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <form class="text-box">
+                                                <textarea placeholder="Nhập tin nhắn..."></textarea>
+                                                <div class="add-smiles">
+                                                    <span class="em em-full_moon_with_face" title="add icon"></span>
+                                                </div>
+                                                <div class="smiles-bunch" style="margin-top: 45px">
+                                                    <i class="em em---1"></i>
+                                                    <i class="em em-smiley"></i>
+                                                    <i class="em em-anguished"></i>
+                                                    <i class="em em-laughing"></i>
+                                                    <i class="em em-angry"></i>
+                                                    <i class="em em-astonished"></i>
+                                                    <i class="em em-blush"></i>
+                                                    <i class="em em-disappointed"></i>
+                                                    <i class="em em-worried"></i>
+                                                    <i class="em em-kissing_heart"></i>
+                                                    <i class="em em-rage"></i>
+                                                    <i class="em em-stuck_out_tongue"></i>
+                                                </div>
+                                            </form>
+                                            <div class="send-message">
+                                                <button type="submit"><i class="fas fa-paper-plane" style="color: #5271ff; font-size: 24px"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
