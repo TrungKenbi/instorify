@@ -10565,3 +10565,20 @@ span.offline{
 #fade:hover ~ #boxclose {
     display:none;
 }
+
+.friend button{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: -20px;
+}
+
+.friend i{
+    color: #5271ff;
+}
+
+.edit-user button{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+}

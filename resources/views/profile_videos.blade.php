@@ -41,7 +41,12 @@
                             <a class="" href="/profile_photos" title="" data-ripple="">Ảnh</a>
                             <a class="" href="#" title="" data-ripple="">Bài hát</a>
                             <a class="active" href="/profile_videos" title="" data-ripple="">Video</a>
-                            <a name="edituser" class="edit-user-btn" href="/edituser" title="" data-ripple=""><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</a>
+                            <a name="edituser" class="edit-user" href="/edituser" title="" data-ripple=""><button><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</button></a>
+                        </li>
+                        <li class="friend">
+                            <a name="add_friend" href="#" ><button><i class="fas fa-user-plus"></i> Kết bạn</button></a>
+                            <a name="friend" href="#" hidden><button><i class="fas fa-user-times" style="color: red"></i> Huỷ kết bạn</button></a>
+                            <a name="inbox" href="#" ><button><i class="fab fa-facebook-messenger"></i> Nhắn tin</button></a>
                         </li>
                     </ul>
                 </div>
