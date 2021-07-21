@@ -134,16 +134,17 @@
                                         <div class="modal fade" id="textbox" aria-labelledby="textbox">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Tạo bài viết</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body custom-scroll">
-                                                        <form>
-                                                    <textarea name="share" class="share-field-big custom-scroll"
+                                                    <form action="{{ route('posts.store') }}" method="POST">
+                                                        @csrf
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Tạo bài viết</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body custom-scroll">
+                                                            <textarea name="content" class="share-field-big custom-scroll"
                                                               id="editor" placeholder="Bạn đang nghĩ gì?"></textarea>
                                                             <div class="attachments">
                                                                 <ul>
@@ -163,12 +164,12 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="post-share-btn" data-dismiss="modal">Huỷ</button>
-                                                        <button type="button" class="post-share-btn">Đăng</button>
-                                                    </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="post-share-btn" data-dismiss="modal">Huỷ</button>
+                                                            <button type="submit" class="post-share-btn">Đăng</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

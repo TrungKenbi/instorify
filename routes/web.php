@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
 Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('posts', PostController::class);
     Route::resource('posts.comments', PostCommentController::class);
@@ -33,9 +35,7 @@ Route::middleware(['web', 'auth'])->group(function () {
 //    return view('landing');
 //});
 
-Route::get('/home', function () {
-    return view('feed');
-});
+Route::get('/home', 'HomeController@index');
 
 Route::get('/profile', function () {
     return view('profile');

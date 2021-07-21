@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -14,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return 'ok';
+        $posts = Post::where('user_id', Auth::id())->get();
+        dd($posts);
     }
 
     /**
@@ -35,7 +37,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'content' => 'required|string',
+        ]);
+
+        $post = new Post([
+            'user_id' => Auth::id(),
+            'content' => $request->get('content'),
+        ]);
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Posts saved!');
     }
 
     /**
