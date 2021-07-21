@@ -134,7 +134,7 @@
                                         <div class="modal fade" id="textbox" aria-labelledby="textbox">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
-                                                    <form action="{{ route('posts.store') }}" method="POST">
+                                                    <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                                                         @csrf
                                                         <div class="modal-header">
                                                             <h5 class="modal-title">Tạo bài viết</h5>
@@ -152,14 +152,14 @@
                                                                         <i class="fas fa-photo-video"
                                                                            style="color: #5271ff"></i>
                                                                         <label class="fileContainer">
-                                                                            <input type="file"
+                                                                            <input type="file" name="photos[]"
                                                                                    accept="image/png, image/jpg, image/jpeg, video/mp4">
                                                                         </label>
                                                                     </li>
                                                                     <li>
                                                                         <i class="fas fa-music" style="color: #5271ff"></i>
                                                                         <label class="fileContainer">
-                                                                            <input type="file" accept="audio/mp3">
+                                                                            <input type="file" name="music[]" accept="audio/mp3">
                                                                         </label>
                                                                     </li>
                                                                 </ul>
