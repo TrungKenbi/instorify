@@ -60,7 +60,7 @@ class Post extends Model
     }
 
     /**
-     * Get the photos for the post
+     * Get the reactions for the post
      */
     public function reactions()
     {
@@ -73,7 +73,7 @@ class Post extends Model
     }
 
     /**
-     * Get the photos for the post
+     * Get the comments for the post
      */
     public function comments()
     {

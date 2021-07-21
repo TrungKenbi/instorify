@@ -254,7 +254,7 @@
                                                 </div>
                                                 <div class="we-video-info statistic">
                                                     <ul>
-                                                        <li>50</li>
+                                                        <li>{{ $post->comments()->count() }}</li>
                                                         <li style="margin-left: -40px">Bình luận</li>
                                                         <li style="margin-left: -40px">50</li>
                                                         <li style="margin-left: -40px">Lượt chia sẻ</li>
@@ -265,53 +265,36 @@
                                                 <div class="coment-area">
                                                     <hr style="margin-top: -10px; width: 96%">
                                                     <ul class="we-comet">
-                                                        <li>
-                                                            <div class="comet-avatar">
-                                                                <img src="/assets/img/sample_ava1.jpg" alt="">
-                                                            </div>
-                                                            <div class="we-comment">
-                                                                <div class="coment-head">
-                                                                    <h5><a href="#" title="">Dương Lê Phước Trung</a></h5>
-                                                                    <span>1 phút trước</span>
-                                                                    <a class="we-reply" href="#" title="Like"><i
-                                                                            class="far fa-heart"></i></a>
-                                                                    <a class="we-reply" href="#" title="Reply"><i
-                                                                            class="fa fa-reply"></i></a>
+                                                        @foreach($post->comments()->limit(20)->get() as $comment)
+                                                            <li>
+                                                                <div class="comet-avatar">
+                                                                    <img src="{{ $comment->user->avatar_url }}" alt="">
                                                                 </div>
-                                                                <p>Nhạc hay quá trời quá đất luôn á</p>
-                                                            </div>
-                                                            <ul>
-                                                                <li>
-                                                                    <div class="comet-avatar">
-                                                                        <img src="/assets/img/avartar.png" alt="">
+                                                                <div class="we-comment">
+                                                                    <div class="coment-head">
+                                                                        <h5><a href="#" title="">{{ $comment->user->fullname }}</a></h5>
+                                                                        <span>{{ Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</span>
+                                                                        <a class="we-reply" href="#" title="Like"><i
+                                                                                class="far fa-heart"></i></a>
+                                                                        <a class="we-reply" href="#" title="Reply"><i
+                                                                                class="fa fa-reply"></i></a>
                                                                     </div>
-                                                                    <div class="we-comment">
-                                                                        <div class="coment-head">
-                                                                            <h5><a href="time-line.html" title="">Minh Hiếu</a></h5>
-                                                                            <span>Vừa xong</span>
-                                                                            <a class="we-reply" href="#" title="Like"><i class="far fa-heart"></i></a>
-                                                                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-                                                                        </div>
-                                                                        <p>yes, really very awesome car i see the features of
-                                                                            this car in the official website of <a href="#" title="">#Mercedes-Benz</a>
-                                                                            and really impressed :-)</p>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
+                                                                    <p>{{ $comment->content }}</p>
+                                                                </div>
+                                                            </li>
+                                                        @endforeach
+                                                        <li style="display: none">
                                                             <a href="#" title="" class="showmore underline">Xem thêm bình luận
                                                                 khác</a>
                                                         </li>
                                                         <hr style="width: 98%; margin-top: -10px; margin-left: 10px">
                                                         <li class="post-comment">
-
                                                             <div class="comet-avatar">
-                                                                <img src="/assets/img/avartar.png" alt="" style="width: 90%">
+                                                                <img src="{{ auth()->user()->avatar_url }}" alt="" style="width: 90%">
                                                             </div>
                                                             <div class="post-comt-box">
                                                                 <form method="post">
-                                                                    <textarea placeholder="Viết bình luận của bạn"></textarea>
+                                                                    <textarea placeholder="Viết bình luận của bạn" data-id="{{ $post->id }}"></textarea>
                                                                     <div class="add-smiles">
                                                                 <span class="em em-full_moon_with_face"
                                                                       title="add icon"></span>

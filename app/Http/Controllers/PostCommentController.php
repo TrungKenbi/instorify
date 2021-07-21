@@ -2,62 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\PostComment;
+use App\Models\PostComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostCommentController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param $postId
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function store(Request $request)
+    public function store($postId, Request $request)
     {
-        //
-    }
+        $request->validate([
+            'content' => 'required'
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\PostComment  $postComment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PostComment $postComment)
-    {
-        //
-    }
+        $comment = PostComment::create([
+            'user_id' => Auth::id(),
+            'post_id' => $postId,
+            'content' => $request->get('content'),
+        ]);
+        $comment->save();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\PostComment  $postComment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(PostComment $postComment)
-    {
-        //
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Bình luận bài viết thành công',
+        ]);
     }
 
     /**

@@ -49,7 +49,7 @@
         <div id="album-art">
             <img src=""
                  class="active" id="_1">
-            <div id="buffer-box">Buffering ...</div>
+            <div id="buffer-box">Đang tải ...</div>
         </div>
     </div>
     <div class="player-controls">

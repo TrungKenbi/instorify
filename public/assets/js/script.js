@@ -341,14 +341,38 @@ jQuery(document).ready(function ($) {
     }
 
     /** Post a Comment **/
-    jQuery(".post-comt-box textarea").on("keydown", function (event) {
-
+    $(".post-comt-box textarea").on("keydown", function (event) {
         if (event.keyCode == 13) {
-            var comment = jQuery(this).val();
-            var parent = jQuery(".showmore").parent("li");
-            var comment_HTML = '	<li><div class="comet-avatar"><img src="images/resources/comet-1.jpg" alt=""></div><div class="we-comment"><div class="coment-head"><h5><a href="time-line.html" title="">Jason borne</a></h5><span>1 year ago</span><a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a></div><p>' + comment + '</p></div></li>';
+            let postId = $(this).data("id");
+            let comment = $(this).val();
+            let parent = $(".showmore").parent("li");
+            let comment_HTML = `
+                <li>
+                    <div class="comet-avatar"><img src="${USER_DATA.avatar}" alt=""></div>
+                    <div class="we-comment">
+                        <div class="coment-head">
+                            <h5><a href="time-line.html" title="">${USER_DATA.first_name + " " + USER_DATA.last_name}</a></h5>
+                            <span>Vừa xong</span>
+                            <a class="we-reply" href="#" title="Trả lời"><i class="fa fa-reply"></i></a>
+                        </div>
+                        <p>${comment}</p>
+                    </div>
+                </li>`;
             $(comment_HTML).insertBefore(parent);
-            jQuery(this).val('');
+            $(this).val('');
+
+
+            $.ajax({
+                type: 'POST',
+                url: `/posts/${postId}/comments`,
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                data: {
+                    content: comment
+                },
+                success: function (data) {
+                    console.log(data);
+                }
+            });
         }
     });
 

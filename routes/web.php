@@ -24,7 +24,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('photos', PhotoController::class);
     Route::resource('music', MusicController::class);
     Route::resource('posts.reactions', PostReactionController::class)->only(['store']);
-    Route::resource('posts.comments', PostCommentController::class);
+    Route::resource('posts.comments', PostCommentController::class)->only(['store', 'edit', 'destroy']);
 });
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\PostReaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +28,10 @@ class PostReactionController extends Controller
 
         if ($reaction) {
             $reaction->delete();
+            Post::where('id', $postId)
+                ->update([
+                    'reactions'=> DB::raw('reactions-1'),
+                ]);
         } else {
             $reaction = PostReaction::create([
                 'user_id' => Auth::id(),
@@ -34,6 +39,10 @@ class PostReactionController extends Controller
                 'type' => $request->get('type'),
             ]);
             $reaction->save();
+            Post::where('id', $postId)
+                ->update([
+                    'reactions'=> DB::raw('reactions+1'),
+                ]);
         }
 
         return response()->json([

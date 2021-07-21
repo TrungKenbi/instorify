@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->text('content')->nullable();
-            $table->integer('likes')->default(0);
+            $table->integer('reactions')->default(0);
             $table->integer('comments')->default(0);
             $table->integer('shares')->default(0);
             $table->timestamps();

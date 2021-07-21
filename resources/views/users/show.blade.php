@@ -395,7 +395,7 @@
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li>
+                                                        <li style="display: none">
                                                             <a href="#" title="" class="showmore underline">Xem thêm bình luận khác</a>
                                                         </li>
                                                         <hr style="width: 98%; margin-top: -10px; margin-left: 10px">
