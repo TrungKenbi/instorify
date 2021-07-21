@@ -25,6 +25,21 @@ $(function () {
         url: "/assets/music/sample.mp3",
         picture: "/assets/img/disk.png"
     }];
+	
+	if (playlist) {
+		songs = playlist;
+		songs.forEach((song, index) => {
+			if (!song.picture)
+				songs[index].picture = "/assets/img/disk.png";
+			if (!song.name)
+				songs[index].name = "Không rõ tên bài hát";
+			if (!song.artist)
+				songs[index].artist = "Không rõ ca sĩ";
+		});
+		// console.log(songs);
+	}
+	
+    songs = shuffle(songs);
 
     function shuffle(a) {
         var j, x, i;
@@ -36,7 +51,6 @@ $(function () {
         }
         return a;
     }
-    songs = shuffle(songs);
 
     function playPause() {
         setTimeout(function () {

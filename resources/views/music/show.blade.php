@@ -43,19 +43,35 @@
 
 <body>
 
-<!-- ========== HEADER ========== -->
-@include('layouts.header')
+<script>
+    const playlist = {!! json_encode([$music]) !!};
+</script>
 
-<!-- ========== BODY ========== -->
-@yield('content')
-
-<!-- ========== FOOTER ========== -->
-@include('layouts.footer')
-
-<div class="scroll-top not-visible">
-    <i class="fas fa-arrow-alt-circle-up"></i>
+<div class="post-meta music" style="width: 684px; margin-top: 50px;">
+    <div id="player-content">
+        <div id="album-art">
+            <img src=""
+                 class="active" id="_1">
+            <div id="buffer-box">Buffering ...</div>
+        </div>
+    </div>
+    <div class="player-controls">
+        <div class="control">
+            <div class="button" id="play-pause-button">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+    </div>
+    <div id="player-track">
+        <div id="album-name">ok</div>
+        <div id="track-name">ok ok</div>
+        <div id="s-area">
+            <div id="ins-time"></div>
+            <div id="s-hover"></div>
+            <div id="seek-bar"></div>
+        </div>
+    </div>
 </div>
-
 <!-- ============================================ JS ============================================ -->
 <!-- Modernizer JS -->
 <script src="/assets/js/home/vendor/modernizr-3.6.0.min.js"></script>
@@ -82,6 +98,6 @@
 <!-- Main JS -->
 <script src="/assets/js/home/main.js"></script>
 <script src="/assets/js/script.js"></script>
-{{--<script src="/assets/js/music.js"></script>--}}
+<script src="/assets/js/music.js"></script>
 </body>
 </html>

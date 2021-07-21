@@ -306,32 +306,11 @@
                                                 </div>
 
                                                 <!-- MUSIC PART -->
-                                                <div class="post-meta music" style="width: 684px">
-                                                    <div id="player-content">
-                                                        <div id="album-art">
-                                                            <img src=""
-                                                                 class="active" id="_1">
-                                                            <div id="buffer-box">Buffering ...</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="player-controls">
-                                                        <div class="control">
-                                                            <div class="button" id="play-pause-button">
-                                                                <i class="fas fa-play"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div id="player-track">
-                                                        <div id="album-name"></div>
-                                                        <div id="track-name"></div>
-                                                        <div id="s-area">
-                                                            <div id="ins-time"></div>
-                                                            <div id="s-hover"></div>
-                                                            <div id="seek-bar"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                                @if(count($post->photos) > 0)
+                                                    @foreach($post->music as $music)
+                                                    <iframe src="{{ route('music.show', $music->id) }}" frameBorder="0"></iframe>
+                                                    @endforeach
+                                                @endif
                                                 <!-- LIKE, SHARE, COMMENT BUTTON PART -->
                                                 <div class="we-video-info">
                                                     <ul>
@@ -401,9 +380,8 @@
                                                         </li>
                                                         <hr style="width: 98%; margin-top: -10px; margin-left: 10px">
                                                         <li class="post-comment">
-
                                                             <div class="comet-avatar">
-                                                                <img src="/assets/img/avartar.png" alt="" style="width: 90%">
+                                                                <img src="{{ $post->user->avatar_url }}" alt="" style="width: 90%">
                                                             </div>
                                                             <div class="post-comt-box">
                                                                 <form method="post">
@@ -436,136 +414,138 @@
                                     </div>
                                     @endforeach
                                     <!-- POST VIDEO -->
-                                    <div class="central-meta item" style="margin-top: -10px">
-                                        <div class="user-post">
-                                            <div class="friend-info">
-                                                <!-- POST INFO PART -->
-                                                <figure>
-                                                    <img src="/assets/img/sample_ava1.jpg" alt="profile picture" style="width: 80%">
-                                                </figure>
-                                                <div class="friend-name">
-                                                    <ins><a href="#" title="">Dương Lê Phước Trung</a></ins>
-                                                    <span>11 tháng 07 lúc 08:00 PM</span>
-                                                </div>
-                                                <div class="option-post">
-                                                    <i class="fas fa-ellipsis-v"></i>
-                                                </div>
 
-                                                <!-- POST CAPTION -->
-                                                <div class="post-caption">
-                                                    <p>Hôm nay trời nhẹ lên cao cao quá cao</p>
-                                                </div>
+{{--                                    <div class="central-meta item" style="margin-top: -10px">--}}
+{{--                                        <div class="user-post">--}}
+{{--                                            <div class="friend-info">--}}
+{{--                                                <!-- POST INFO PART -->--}}
+{{--                                                <figure>--}}
+{{--                                                    <img src="/assets/img/sample_ava1.jpg" alt="profile picture" style="width: 80%">--}}
+{{--                                                </figure>--}}
+{{--                                                <div class="friend-name">--}}
+{{--                                                    <ins><a href="#" title="">Dương Lê Phước Trung</a></ins>--}}
+{{--                                                    <span>11 tháng 07 lúc 08:00 PM</span>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="option-post">--}}
+{{--                                                    <i class="fas fa-ellipsis-v"></i>--}}
+{{--                                                </div>--}}
 
-                                                <!-- POST IMAGE -->
-                                                <div class="post-meta">
-                                                    <video id="VisaChipCardVideo" style="width: 685px" controls>
-                                                        <source src="/assets/videos/sample.mp4" type="video/mp4">
-                                                        <!--Browser does not support ok<video> tag -->
-                                                    </video>
-                                                </div>
+{{--                                                <!-- POST CAPTION -->--}}
+{{--                                                <div class="post-caption">--}}
+{{--                                                    <p>Hôm nay trời nhẹ lên cao cao quá cao</p>--}}
+{{--                                                </div>--}}
 
-                                                <!-- LIKE, SHARE, COMMENT BUTTON PART -->
-                                                <div class="we-video-info">
-                                                    <ul>
-                                                        <li>
-                                                        <span class="like" id="likePost" data-toggle="tooltip" title="Like">
-                                                            <i class="far fa-heart"></i>
-                                                        </span>
-                                                        </li>
-                                                        <li>
-                                                        <span class="comment" data-toggle="tooltip" title="Comments">
-                                                            <i class="far fa-comment-alt"></i>
-                                                        </span>
-                                                        </li>
-                                                        <li>
-                                                        <span class="share" data-toggle="tooltip" title="Share">
-                                                            <i class="fas fa-share-alt"></i>
-                                                        </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="we-video-info statistic">
-                                                    <ul>
-                                                        <li>50</li>
-                                                        <li style="margin-left: -40px">Bình luận</li>
-                                                        <li style="margin-left: -40px">50</li>
-                                                        <li style="margin-left: -40px">Lượt chia sẻ</li>
-                                                    </ul>
-                                                </div>
+{{--                                                <!-- POST IMAGE -->--}}
+{{--                                                <div class="post-meta">--}}
+{{--                                                    <video id="VisaChipCardVideo" style="width: 685px" controls>--}}
+{{--                                                        <source src="/assets/videos/sample.mp4" type="video/mp4">--}}
+{{--                                                        <!--Browser does not support ok<video> tag -->--}}
+{{--                                                    </video>--}}
+{{--                                                </div>--}}
 
-                                                <!-- COMMENT PART -->
-                                                <div class="coment-area">
-                                                    <hr style="margin-top: -10px; width: 96%">
-                                                    <ul class="we-comet">
-                                                        <li>
-                                                            <div class="comet-avatar">
-                                                                <img src="/assets/img/sample_ava1.jpg" alt="">
-                                                            </div>
-                                                            <div class="we-comment">
-                                                                <div class="coment-head">
-                                                                    <h5><a href="#" title="">Dương Lê Phước Trung</a></h5>
-                                                                    <span>1 phút trước</span>
-                                                                    <a class="we-reply" href="#" title="Like"><i class="far fa-heart"></i></a>
-                                                                    <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-                                                                </div>
-                                                                <p>Nhạc hay quá trời quá đất luôn á</p>
-                                                            </div>
-                                                            <ul>
-                                                                <li>
-                                                                    <div class="comet-avatar">
-                                                                        <img src="/assets/img/avartar.png" alt="">
-                                                                    </div>
-                                                                    <div class="we-comment">
-                                                                        <div class="coment-head">
-                                                                            <h5><a href="time-line.html" title="">Minh Hiếu</a></h5>
-                                                                            <span>Vừa xong</span>
-                                                                            <a class="we-reply" href="#" title="Like"><i class="far fa-heart"></i></a>
-                                                                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-                                                                        </div>
-                                                                        <p>yes, really very awesome car i see the features of this car in the official website of <a href="#" title="">#Mercedes-Benz</a> and really impressed :-)</p>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="" class="showmore underline">Xem thêm bình luận khác</a>
-                                                        </li>
-                                                        <hr style="width: 98%; margin-top: -10px; margin-left: 10px">
-                                                        <li class="post-comment">
+{{--                                                <!-- LIKE, SHARE, COMMENT BUTTON PART -->--}}
+{{--                                                <div class="we-video-info">--}}
+{{--                                                    <ul>--}}
+{{--                                                        <li>--}}
+{{--                                                        <span class="like" id="likePost" data-toggle="tooltip" title="Like">--}}
+{{--                                                            <i class="far fa-heart"></i>--}}
+{{--                                                        </span>--}}
+{{--                                                        </li>--}}
+{{--                                                        <li>--}}
+{{--                                                        <span class="comment" data-toggle="tooltip" title="Comments">--}}
+{{--                                                            <i class="far fa-comment-alt"></i>--}}
+{{--                                                        </span>--}}
+{{--                                                        </li>--}}
+{{--                                                        <li>--}}
+{{--                                                        <span class="share" data-toggle="tooltip" title="Share">--}}
+{{--                                                            <i class="fas fa-share-alt"></i>--}}
+{{--                                                        </span>--}}
+{{--                                                        </li>--}}
+{{--                                                    </ul>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="we-video-info statistic">--}}
+{{--                                                    <ul>--}}
+{{--                                                        <li>50</li>--}}
+{{--                                                        <li style="margin-left: -40px">Bình luận</li>--}}
+{{--                                                        <li style="margin-left: -40px">50</li>--}}
+{{--                                                        <li style="margin-left: -40px">Lượt chia sẻ</li>--}}
+{{--                                                    </ul>--}}
+{{--                                                </div>--}}
 
-                                                            <div class="comet-avatar">
-                                                                <img src="/assets/img/avartar.png" alt="" style="width: 90%">
-                                                            </div>
-                                                            <div class="post-comt-box">
-                                                                <form method="post">
-                                                                    <textarea placeholder="Viết bình luận của bạn"></textarea>
-                                                                    <div class="add-smiles">
-                                                                        <span class="em em-full_moon_with_face" title="add icon"></span>
-                                                                    </div>
-                                                                    <div class="smiles-bunch">
-                                                                        <i class="em em---1"></i>
-                                                                        <i class="em em-smiley"></i>
-                                                                        <i class="em em-anguished"></i>
-                                                                        <i class="em em-laughing"></i>
-                                                                        <i class="em em-angry"></i>
-                                                                        <i class="em em-astonished"></i>
-                                                                        <i class="em em-blush"></i>
-                                                                        <i class="em em-disappointed"></i>
-                                                                        <i class="em em-worried"></i>
-                                                                        <i class="em em-kissing_heart"></i>
-                                                                        <i class="em em-rage"></i>
-                                                                        <i class="em em-stuck_out_tongue"></i>
-                                                                    </div>
-                                                                    <button type="submit"></button>
-                                                                </form>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="lodmore"><button class="btn-view btn-load-more"></button></div>
+{{--                                                <!-- COMMENT PART -->--}}
+{{--                                                <div class="coment-area">--}}
+{{--                                                    <hr style="margin-top: -10px; width: 96%">--}}
+{{--                                                    <ul class="we-comet">--}}
+{{--                                                        <li>--}}
+{{--                                                            <div class="comet-avatar">--}}
+{{--                                                                <img src="/assets/img/sample_ava1.jpg" alt="">--}}
+{{--                                                            </div>--}}
+{{--                                                            <div class="we-comment">--}}
+{{--                                                                <div class="coment-head">--}}
+{{--                                                                    <h5><a href="#" title="">Dương Lê Phước Trung</a></h5>--}}
+{{--                                                                    <span>1 phút trước</span>--}}
+{{--                                                                    <a class="we-reply" href="#" title="Like"><i class="far fa-heart"></i></a>--}}
+{{--                                                                    <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>--}}
+{{--                                                                </div>--}}
+{{--                                                                <p>Nhạc hay quá trời quá đất luôn á</p>--}}
+{{--                                                            </div>--}}
+{{--                                                            <ul>--}}
+{{--                                                                <li>--}}
+{{--                                                                    <div class="comet-avatar">--}}
+{{--                                                                        <img src="/assets/img/avartar.png" alt="">--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="we-comment">--}}
+{{--                                                                        <div class="coment-head">--}}
+{{--                                                                            <h5><a href="time-line.html" title="">Minh Hiếu</a></h5>--}}
+{{--                                                                            <span>Vừa xong</span>--}}
+{{--                                                                            <a class="we-reply" href="#" title="Like"><i class="far fa-heart"></i></a>--}}
+{{--                                                                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>--}}
+{{--                                                                        </div>--}}
+{{--                                                                        <p>yes, really very awesome car i see the features of this car in the official website of <a href="#" title="">#Mercedes-Benz</a> and really impressed :-)</p>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </li>--}}
+{{--                                                            </ul>--}}
+{{--                                                        </li>--}}
+{{--                                                        <li>--}}
+{{--                                                            <a href="#" title="" class="showmore underline">Xem thêm bình luận khác</a>--}}
+{{--                                                        </li>--}}
+{{--                                                        <hr style="width: 98%; margin-top: -10px; margin-left: 10px">--}}
+{{--                                                        <li class="post-comment">--}}
+
+{{--                                                            <div class="comet-avatar">--}}
+{{--                                                                <img src="/assets/img/avartar.png" alt="" style="width: 90%">--}}
+{{--                                                            </div>--}}
+{{--                                                            <div class="post-comt-box">--}}
+{{--                                                                <form method="post">--}}
+{{--                                                                    <textarea placeholder="Viết bình luận của bạn"></textarea>--}}
+{{--                                                                    <div class="add-smiles">--}}
+{{--                                                                        <span class="em em-full_moon_with_face" title="add icon"></span>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="smiles-bunch">--}}
+{{--                                                                        <i class="em em---1"></i>--}}
+{{--                                                                        <i class="em em-smiley"></i>--}}
+{{--                                                                        <i class="em em-anguished"></i>--}}
+{{--                                                                        <i class="em em-laughing"></i>--}}
+{{--                                                                        <i class="em em-angry"></i>--}}
+{{--                                                                        <i class="em em-astonished"></i>--}}
+{{--                                                                        <i class="em em-blush"></i>--}}
+{{--                                                                        <i class="em em-disappointed"></i>--}}
+{{--                                                                        <i class="em em-worried"></i>--}}
+{{--                                                                        <i class="em em-kissing_heart"></i>--}}
+{{--                                                                        <i class="em em-rage"></i>--}}
+{{--                                                                        <i class="em em-stuck_out_tongue"></i>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <button type="submit"></button>--}}
+{{--                                                                </form>--}}
+{{--                                                            </div>--}}
+{{--                                                        </li>--}}
+{{--                                                    </ul>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="lodmore"><button class="btn-view btn-load-more"></button></div>--}}
+
                                 </div>
                             </div>
                         </div>

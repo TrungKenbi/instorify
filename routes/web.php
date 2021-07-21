@@ -22,6 +22,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('posts', PostController::class);
     Route::resource('posts.comments', PostCommentController::class);
+    Route::resource('music', MusicController::class);
 });
 
 

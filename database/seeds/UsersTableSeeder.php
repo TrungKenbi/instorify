@@ -30,6 +30,18 @@ class UsersTableSeeder extends Seeder
         ];
 
         $users[] = [
+            'username' => 'kimlien1503',
+            'email' => 'kimlientdmu@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('23456789'),
+            'first_name' => 'Liên',
+            'last_name' => 'Nguyễn Thị Kim',
+            'dob' => '2000-03-15',
+            'gender' => 'female',
+            'is_admin' => true,
+        ];
+
+        $users[] = [
             'username' => 'hieuleggo123',
             'email' => 'hieuleggo@gmail.com',
             'email_verified_at' => now(),

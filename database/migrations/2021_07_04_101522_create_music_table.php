@@ -16,7 +16,10 @@ class CreateMusicTable extends Migration
         Schema::create('music', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('post_id');
+            $table->string('artist')->nullable();
+            $table->string('name')->nullable();
             $table->string('url');
+            $table->string('picture')->nullable();
             $table->timestamps();
 
             $table->foreign('post_id')
