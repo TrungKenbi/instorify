@@ -24,8 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        // dd($posts);
-        return view('home');
+        $posts = Post::orderByRaw('RAND()')->limit(10)->get();
+        return view('home', compact('posts'));
     }
 }
