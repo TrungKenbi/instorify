@@ -1407,6 +1407,18 @@ form button {
 .post-meta > img {
     float: left;
     width: 100%;
+    z-index: 1;
+}
+
+.post-meta > iframe{
+    z-index: 2;
+    float: left;
+    width: 685px;
+    height: 90px;
+    background-color: white;
+    margin-top: -70px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
 }
 
 .description {
@@ -10223,7 +10235,8 @@ input#file{
     height: 100%;
     box-shadow: 0 30px 80px #656565;
     border-radius: 15px;
-    z-index: 2;
+    z-index: 3;
+    margin-top: -40px;
 }
 
 #album-art
@@ -10245,7 +10258,6 @@ input#file{
 
 #album-art.active
 {
-    top: -60px;
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
@@ -10402,7 +10414,7 @@ input#file{
     height: 80px;
     background-color: white;
     margin-left: 12px;
-    margin-top: -40px;
+    margin-top: 0px;
     border: 1px solid lightgrey;
     border-radius: 15px;
 }

@@ -34,10 +34,7 @@
     <link rel="stylesheet" href="/assets/css/home/style.css">
     <link rel="stylesheet" href="/assets/css/main.min.css">
     <link rel="stylesheet" href="/assets/css/style_landing.css">
-    <link rel="stylesheet" href="/assets/css/color.css">
-    <link rel="stylesheet" href="/assets/css/responsive.css">
 
-    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
 
 </head>
 
@@ -47,7 +44,7 @@
     const playlist = {!! json_encode([$music]) !!};
 </script>
 
-<div class="post-meta music" style="width: 684px; margin-top: 50px;">
+<div class="post-meta" style="">
     <div id="player-content">
         <div id="album-art">
             <img src=""

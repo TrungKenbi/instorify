@@ -306,11 +306,13 @@
                                                 </div>
 
                                                 <!-- MUSIC PART -->
-                                                @if(count($post->photos) > 0)
-                                                    @foreach($post->music as $music)
-                                                    <iframe src="{{ route('music.show', $music->id) }}" frameBorder="0"></iframe>
-                                                    @endforeach
-                                                @endif
+                                                <div class="post-meta">
+                                                    @if(count($post->photos) > 0)
+                                                        @foreach($post->music as $music)
+                                                            <iframe src="{{ route('music.show', $music->id) }}" frameBorder="0"></iframe>
+                                                        @endforeach
+                                                    @endif
+                                                </div>
                                                 <!-- LIKE, SHARE, COMMENT BUTTON PART -->
                                                 <div class="we-video-info">
                                                     <ul>
