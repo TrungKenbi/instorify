@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::orderByRaw('RAND()')->limit(10)->get();
-        return view('home', compact('posts'));
+        $recommendFriends = User::where('id', '!=', auth()->id())->orderByRaw('RAND()')->limit(10)->get();
+        return view('home', compact('posts', 'recommendFriends'));
     }
 }
