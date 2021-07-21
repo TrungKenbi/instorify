@@ -25,6 +25,7 @@ class UsersTableSeeder extends Seeder
             'last_name' => 'Dương Lê Phước',
             'dob' => '2000-06-17',
             'gender' => 'male',
+            'avatar' => '/assets/img/sample_ava1.jpg',
             'is_admin' => true,
         ];
 

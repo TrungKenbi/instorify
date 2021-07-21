@@ -38,11 +38,16 @@
                         <span><img src="/assets/img/login_text.png" alt="Login" style="width: 50%"></span>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
+                            @if($errors->any())
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-warning">{{ $error }}</div>
+                                @endforeach
+                            @endif
                             <div class="form-group">
-                                <input type="text" name="email" value="{{ old('email') }}" required="required"/>
+                                <input type="text" name="username" value="{{ old('username') }}" required="required"/>
                                 <label class="control-label" for="input">Tên đăng nhập</label><i class="mtrl-select"></i>
 
-                                @error('email')
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

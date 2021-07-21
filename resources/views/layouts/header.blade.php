@@ -155,13 +155,13 @@
                             <div class="profile-thumb-small">
                                 <a href="javascript:void(0)" class="profile-triger">
                                     <figure>
-                                        <img src="/assets/img/avartar.png" alt="profile picture">
+                                        <img src="{{ Auth::user()->avatar_link }}" alt="profile picture">
                                     </figure>
                                 </a>
                                 <div class="profile-dropdown">
                                     <div class="profile-head">
-                                        <h5 class="name"><a href="#">Minh Hiếu</a></h5>
-                                        <a class="mail" href="#">hieutran@gmail.com</a>
+                                        <h5 class="name"><a href="#">{{ Auth::user()->fullname }}</a></h5>
+                                        <a class="mail" href="#">{{ Auth::user()->email }}</a>
                                     </div>
                                     <div class="profile-body">
                                         <ul>

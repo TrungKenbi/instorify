@@ -39,4 +39,25 @@ class User extends Authenticatable
         'dob' => 'date',
         'is_admin' => 'boolean',
     ];
+
+
+    /**
+     * Get fullname
+     *
+     * @return string
+     */
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    /**
+     * Get fullname
+     *
+     * @return string
+     */
+    public function getAvatarLinkAttribute()
+    {
+        return $this->avatar ?? '/assets/img/avartar.png';
+    }
 }
