@@ -23,7 +23,7 @@ $(function () {
         artist: "Anda ft R.Tee",
         name: "What You Waiting For?",
         url: "/assets/music/sample.mp3",
-        picture: "https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
+        picture: "/assets/img/disk.png"
     }];
 
     function shuffle(a) {
@@ -211,7 +211,7 @@ $(function () {
 
             albumName.text(currAlbum);
             trackName.text(currTrackName);
-            $('#album-art img').prop('src', bgArtworkUrl);
+            $('#album-art img').prop('src', currArtwork);
         }
         else {
             if (flag == 0 || flag == 1)

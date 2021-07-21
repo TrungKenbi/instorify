@@ -209,7 +209,7 @@
                                                     <div id="player-content">
                                                         <div id="album-art">
                                                             <img
-                                                                src="https://avatar-ex-swe.nixcdn.com/song/2020/05/29/a/7/1/5/1590735141658_640.jpg"
+                                                                src=""
                                                                 class="active" id="_1">
                                                             <div id="buffer-box">Buffering ...</div>
                                                         </div>
