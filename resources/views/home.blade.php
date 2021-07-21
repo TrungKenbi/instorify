@@ -159,7 +159,7 @@
                                                                     <li>
                                                                         <i class="fas fa-music" style="color: #5271ff"></i>
                                                                         <label class="fileContainer">
-                                                                            <input type="file" name="music[]" accept="audio/mp3">
+                                                                            <input type="file" name="music[]" accept="audio/mp3, audio/m4a">
                                                                         </label>
                                                                     </li>
                                                                 </ul>
