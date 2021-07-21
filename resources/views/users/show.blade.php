@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="user-info">
-                <h3>{{ $user->fullname }}</h3>
+                <h3>{{ $user->fullname }}<span class="blue-tick-big"><i class="fas fa-check-circle"></i></span></h3>
                 <p id="profile-story">{{ $user->bio }}</p>
             </div>
             <div class="col-lg-10 col-sm-9">

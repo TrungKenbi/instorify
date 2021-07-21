@@ -10633,3 +10633,22 @@ span.offline{
     width: 500px;
     z-index: 1;
 }
+
+.blue-tick-small{
+    margin-left: 10px;
+}
+
+.blue-tick-small > i{
+    color:dodgerblue;
+    font-size: 16px;
+}
+
+.blue-tick-big{
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+.blue-tick-big > i{
+    color:dodgerblue;
+    font-size: 20px;
+}
