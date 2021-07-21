@@ -77,4 +77,19 @@ class User extends Authenticatable
     {
         return $this->cover ?? '/assets/img/landing.png';
     }
+
+    /**
+     * Get gender text
+     *
+     * @return string
+     */
+    public function getGenderTextAttribute()
+    {
+        $genders = [
+            'male' => 'Nam',
+            'female' => 'Nữ',
+            'unisex' => 'Khác'
+        ];
+        return $genders[$this->gender];
+    }
 }

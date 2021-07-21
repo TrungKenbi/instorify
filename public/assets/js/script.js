@@ -348,10 +348,10 @@ jQuery(document).ready(function ($) {
             let parent = $(".showmore").parent("li");
             let comment_HTML = `
                 <li>
-                    <div class="comet-avatar"><img src="${USER_DATA.avatar}" alt=""></div>
+                    <div class="comet-avatar"><img src="${USER_DATA.avatar ?? '/assets/img/sample_ava.png'}" alt=""></div>
                     <div class="we-comment">
                         <div class="coment-head">
-                            <h5><a href="time-line.html" title="">${USER_DATA.first_name + " " + USER_DATA.last_name}</a></h5>
+                            <h5><a href="" title="">${USER_DATA.first_name + " " + USER_DATA.last_name}</a></h5>
                             <span>Vừa xong</span>
                             <a class="we-reply" href="#" title="Trả lời"><i class="fa fa-reply"></i></a>
                         </div>
