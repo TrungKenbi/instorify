@@ -189,7 +189,12 @@
                                                                             style="width: 80%"></a>
                                                 </figure>
                                                 <div class="friend-name">
-                                                    <ins><a href="{{ route('users.show', $post->user->id) }}" title="">{{ $post->user->fullname }}</a><span class="blue-tick-small"><i class="fas fa-check-circle"></i></span></ins>
+                                                    <ins><a href="{{ route('users.show', $post->user->id) }}" title="">
+                                                            {{ $post->user->fullname }}</a>
+                                                        @if ($post->user->is_admin)
+                                                            <span class="blue-tick-small"><i class="fas fa-check-circle"></i></span>
+                                                        @endif
+                                                    </ins>
                                                     <span>{{ Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</span>
 
                                                 </div>

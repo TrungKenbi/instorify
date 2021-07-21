@@ -29,7 +29,12 @@
                 </div>
             </div>
             <div class="user-info">
-                <h3>{{ $user->fullname }}<span class="blue-tick-big"><i class="fas fa-check-circle"></i></span></h3>
+                <h3>
+                    {{ $user->fullname }}
+                    @if ($user->is_admin)
+                        <span class="blue-tick-big"><i class="fas fa-check-circle"></i></span>
+                    @endif
+                </h3>
                 <p id="profile-story">{{ $user->bio }}</p>
             </div>
             <div class="col-lg-10 col-sm-9">
@@ -286,7 +291,12 @@
                                                     <a href="{{ route('users.show', $post->user->id) }}"><img src="{{ $post->user->avatar_url }}" alt="profile picture" style="width: 80%"></a>
                                                 </figure>
                                                 <div class="friend-name">
-                                                    <ins><a href="{{ route('users.show', $post->user->id) }}" title="">{{ $post->user->fullname }}</a></ins>
+                                                    <ins>
+                                                        <a href="{{ route('users.show', $post->user->id) }}" title="">{{ $post->user->fullname }}</a>
+                                                        @if ($post->user->is_admin)
+                                                            <span class="blue-tick-small"><i class="fas fa-check-circle"></i></span>
+                                                        @endif
+                                                    </ins>
                                                     <span>{{ Carbon\Carbon::parse($post->created_at)->diffForHumans()}}</span>
                                                 </div>
                                                 <div class="option-post">
