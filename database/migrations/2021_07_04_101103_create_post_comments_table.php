@@ -17,6 +17,7 @@ class CreatePostCommentsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('post_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('rep_comment_id')->nullable();
             $table->text('content');
             $table->timestamps();
 
@@ -29,6 +30,12 @@ class CreatePostCommentsTable extends Migration
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('rep_comment_id')
+                ->references('id')
+                ->on('post_comments')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });

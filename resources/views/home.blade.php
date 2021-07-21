@@ -204,7 +204,7 @@
 
                                                 <!-- POST CAPTION -->
                                                 <div class="post-caption">
-                                                    <p>{{ $post->content }}</p>
+                                                    {{ $post->content }}
                                                 </div>
 
                                                 <!-- POST IMAGE -->

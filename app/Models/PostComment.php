@@ -12,7 +12,7 @@ class PostComment extends Model
      * @var array
      */
     protected $fillable = [
-        'post_id', 'user_id', 'content'
+        'post_id', 'user_id', 'rep_comment_id', 'content'
     ];
 
     /**

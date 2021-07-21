@@ -305,7 +305,7 @@
 
                                                 <!-- POST CAPTION -->
                                                 <div class="post-caption">
-                                                    <p>{{ $post->content }}</p>
+                                                    {{ $post->content }}
                                                 </div>
 
                                                 <!-- POST IMAGE -->
@@ -327,9 +327,17 @@
                                                 <div class="we-video-info">
                                                     <ul>
                                                         <li>
-                                                        <span class="like" id="likePost" data-toggle="tooltip" title="Like">
-                                                            <i class="far fa-heart"></i>
-                                                        </span>
+                                                            @if ($post->isUserReactedPost())
+                                                                <span class="like liked" data-toggle="tooltip" data-id="{{ $post->id }}"
+                                                                      title="Yêu thích">
+                                                                    <i class="fas fa-heart" style="color: red"></i>
+                                                                </span>
+                                                            @else
+                                                                <span class="like" data-toggle="tooltip" data-id="{{ $post->id }}"
+                                                                      title="Yêu thích">
+                                                                    <i class="far fa-heart"></i>
+                                                                </span>
+                                                            @endif
                                                         </li>
                                                         <li>
                                                         <span class="comment" data-toggle="tooltip" title="Comments">
