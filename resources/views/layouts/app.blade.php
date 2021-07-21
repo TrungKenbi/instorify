@@ -57,6 +57,15 @@
 </div>
 
 <!-- ============================================ JS ============================================ -->
+
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+
 <!-- Modernizer JS -->
 <script src="/assets/js/home/vendor/modernizr-3.6.0.min.js"></script>
 <!-- jQuery JS -->

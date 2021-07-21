@@ -67,6 +67,11 @@ class Post extends Model
         return $this->hasMany(PostReaction::class);
     }
 
+    public function isUserReactedPost()
+    {
+        return $this->reactions()->where('user_id', auth()->id())->exists();
+    }
+
     /**
      * Get the photos for the post
      */

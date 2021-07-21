@@ -21,8 +21,11 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name(
 Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('posts', PostController::class);
-    Route::resource('posts.comments', PostCommentController::class);
+    Route::resource('photos', PhotoController::class);
     Route::resource('music', MusicController::class);
+    Route::resource('posts.reactions', PostReactionController::class)->only(['store']);
+    //Route::post('posts.reactions.store', 'PostReactionController@store');
+    Route::resource('posts.comments', PostCommentController::class);
 });
 
 

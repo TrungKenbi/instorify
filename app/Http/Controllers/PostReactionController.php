@@ -2,84 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use App\PostReaction;
+use App\Models\PostReaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostReactionController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param $postId
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function store(Request $request)
+    public function store($postId, Request $request)
     {
-        //
-    }
+        $request->validate([
+            'type' => 'required|in:like,care,love,haha,wow,angry'
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\PostReaction  $postReaction
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PostReaction $postReaction)
-    {
-        //
-    }
+        $reaction = PostReaction::where('user_id', Auth::id())
+            ->where('post_id', $postId)
+            ->first();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\PostReaction  $postReaction
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(PostReaction $postReaction)
-    {
-        //
-    }
+        if ($reaction) {
+            $reaction->delete();
+        } else {
+            $reaction = PostReaction::create([
+                'user_id' => Auth::id(),
+                'post_id' => $postId,
+                'type' => $request->get('type'),
+            ]);
+            $reaction->save();
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PostReaction  $postReaction
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, PostReaction $postReaction)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\PostReaction  $postReaction
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(PostReaction $postReaction)
-    {
-        //
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Biểu cảm bài viết thành công',
+        ]);
     }
 }

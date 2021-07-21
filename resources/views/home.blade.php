@@ -114,7 +114,7 @@
                                         <div class="profile-thumb">
                                             <a href="#">
                                                 <figure class="profile-thumb-middle">
-                                                    <img src="/assets/img/avartar.png" alt="profile picture">
+                                                    <img src="{{ Auth::user()->avatar_url }}" alt="profile picture">
                                                 </figure>
                                             </a>
                                         </div>
@@ -227,19 +227,26 @@
                                                 <div class="we-video-info">
                                                     <ul>
                                                         <li>
-															<span class="like" id="likePost" data-toggle="tooltip"
-                                                                  title="Like">
-																<i class="far fa-heart"></i>
-															</span>
+                                                            @if ($post->isUserReactedPost())
+                                                                <span class="like liked" data-toggle="tooltip" data-id="{{ $post->id }}"
+                                                                      title="Yêu thích">
+                                                                    <i class="fas fa-heart" style="color: red"></i>
+                                                                </span>
+                                                            @else
+                                                                <span class="like" data-toggle="tooltip" data-id="{{ $post->id }}"
+                                                                      title="Yêu thích">
+                                                                    <i class="far fa-heart"></i>
+                                                                </span>
+                                                            @endif
                                                         </li>
                                                         <li>
 															<span class="comment" data-toggle="tooltip"
-                                                                  title="Comments">
+                                                                  title="Bình luận">
 																<i class="far fa-comment-alt"></i>
 															</span>
                                                         </li>
                                                         <li>
-															<span class="share" data-toggle="tooltip" title="Share">
+															<span class="share" data-toggle="tooltip" title="Chia sẻ">
 																<i class="fas fa-share-alt"></i>
 															</span>
                                                         </li>
