@@ -10619,5 +10619,5 @@ span.offline{
     position: fixed;
     top: 91px;
     width: 500px;
-    z-index: 9;
+    z-index: 1;
 }
