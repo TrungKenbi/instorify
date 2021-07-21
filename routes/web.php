@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
@@ -18,6 +19,7 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::middleware(['web', 'auth'])->group(function () {
+    Route::resource('users', UserController::class);
     Route::resource('posts', PostController::class);
     Route::resource('posts.comments', PostCommentController::class);
 });

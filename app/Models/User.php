@@ -40,6 +40,13 @@ class User extends Authenticatable
         'is_admin' => 'boolean',
     ];
 
+    /**
+     * Get the posts for the user
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class)->orderBy('id', 'DESC');
+    }
 
     /**
      * Get fullname
@@ -52,12 +59,22 @@ class User extends Authenticatable
     }
 
     /**
-     * Get fullname
+     * Get avatar url
      *
      * @return string
      */
-    public function getAvatarLinkAttribute()
+    public function getAvatarUrlAttribute()
     {
         return $this->avatar ?? '/assets/img/avartar.png';
+    }
+
+    /**
+     * Get cover url
+     *
+     * @return string
+     */
+    public function getCoverUrlAttribute()
+    {
+        return $this->cover ?? '/assets/img/landing.png';
     }
 }

@@ -26,7 +26,7 @@ class PostsTableSeeder extends Seeder
             'content' => "Baby I'm right here",
         ];
 
-        foreach ($posts as $post)
-            Post::create($post);
+//        foreach ($posts as $post)
+//            Post::create($post);
     }
 }

@@ -34,4 +34,28 @@ class Post extends Model
         'comments' => 'integer',
         'shares' => 'integer',
     ];
+
+    /**
+     * Get the user that owns the post.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the photos for the post
+     */
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+
+    /**
+     * Get the photos for the post
+     */
+    public function music()
+    {
+        return $this->hasMany(Music::class);
+    }
 }

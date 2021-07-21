@@ -76,7 +76,7 @@ class PostController extends Controller
             }
         });
 
-        return redirect('/posts')->with('success', 'Posts saved!');
+        return redirect(route('users.show', Auth::id()))->with('success', 'Đăng bài thành công!');
     }
 
     /**
