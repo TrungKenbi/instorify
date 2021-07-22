@@ -4,11 +4,12 @@
     <section style="background-color: white">
         <div class="feature-photo">
             <figure><img src="{{ $user->cover_url }}" alt=""></figure>
-            <form class="edit-phto" style="width: 200px">
+            <form class="edit-phto" style="width: 200px" id="edit-cover" action="{{ route('profile.updateCover') }}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <i class="fa fa-camera-retro"></i>
                 <label class="fileContainer">
                     Chỉnh sửa ảnh bìa
-                    <input type="file" accept="image/png, image/jpeg, image/jpg"/>
+                    <input type="file" name="cover" id="cover" accept="image/png, image/jpeg, image/jpg"/>
                 </label>
             </form>
         </div>
@@ -20,12 +21,21 @@
                             <img src="{{ $user->avatar_url }}" alt="">
                         </figure>
                     </div>
-                    <form class="edit-avatar" style="margin-top: -30px">
+                    <form class="edit-avatar" id="edit-avatar" style="margin-top: -30px" action="{{ route('profile.updateAvatar') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <label class="fileContainer">
                             <i class="fa fa-camera-retro" style="font-size: 30px"></i>
-                            <input type="file" accept="image/png, image/jpeg, image/jpg"/>
+                            <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg, image/jpg"/>
                         </label>
                     </form>
+                    <script>
+                        document.getElementById("avatar").onchange = function() {
+                            document.getElementById("edit-avatar").submit();
+                        };
+                        document.getElementById("cover").onchange = function() {
+                            document.getElementById("edit-cover").submit();
+                        };
+                    </script>
                 </div>
             </div>
             <div class="user-info">
@@ -47,7 +57,7 @@
                             <a class="" href="/profile_music" title="" data-ripple="">Bài hát</a>
                             <a class="" href="/profile_videos" title="" data-ripple="">Video</a>
                             @if (Auth::id() === $user->id)
-                                <a name="edituser" class="edit-user" href="/edituser" title="" data-ripple="">
+                                <a href="{{ route('profile.edit', auth()->id()) }}" class="edit-user" title="" data-ripple="">
                                     <button><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</button>
                                 </a>
                             @endif

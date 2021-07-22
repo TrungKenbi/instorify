@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Photo;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -19,11 +21,62 @@ class ProfileController extends Controller
         return view('users.show', compact('user'));
     }
 
-
     public function friends(User $user) {
         return view('profile.friends', compact('user'));
     }
 
+    public function edit(User $user)
+    {
+        if ($user->id != auth()->id())
+            return redirect(route('profile.edit', auth()->id()));
+
+        $titles = [
+            (object)[
+                'id' => 'single',
+                'name' => 'Độc thân'
+            ],
+            (object)[
+                'id' => 'in_relationship',
+                'name' => 'Đang hẹn hò'
+            ],
+            (object)[
+                'id' => 'married',
+                'name' => 'Đã kết hôn'
+            ],
+        ];
+        return view('profile.edit', compact('user', 'titles'));
+    }
+
+    public function update(User $user, Request $request)
+    {
+        $input = $request->all();
+        $user->fill($input)->save();
+        return redirect()->back();
+    }
+
+    public function updateAvatar(Request $request)
+    {
+        if ($request->hasfile('avatar')) {
+            $file = $request->file('avatar');
+            $path = Storage::disk('public')->putFile('avatars', $file, 'public');
+            $user = auth()->user();
+            $user->avatar = Storage::url($path);
+            $user->save();
+        }
+        return redirect()->back();
+    }
+
+    public function updateCover(Request $request)
+    {
+        if ($request->hasfile('cover')) {
+            $file = $request->file('cover');
+            $path = Storage::disk('public')->putFile('covers', $file, 'public');
+            $user = auth()->user();
+            $user->cover = Storage::url($path);
+            $user->save();
+        }
+        return redirect()->back();
+    }
 
     public function addFriend($userId) {
         $user = User::find($userId);

@@ -32,6 +32,12 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::get('profile/{user}', 'ProfileController@index')->name('profile.index');
     Route::get('profile/{user}/friends', 'ProfileController@friends')->name('profile.friends');
 
+    Route::get('profile/{user}/edit', 'ProfileController@edit')->name('profile.edit');
+    Route::put('profile/{user}', 'ProfileController@update')->name('profile.update');
+
+    Route::post('profile/avatar', 'ProfileController@updateAvatar')->name('profile.updateAvatar');
+    Route::post('profile/cover', 'ProfileController@updateCover')->name('profile.updateCover');
+
     Route::get('profile/friends/add/{id}', 'ProfileController@addFriend')->name('profile.friends.add');
     Route::get('profile/friends/remove/{id}', 'ProfileController@unfriend')->name('profile.friends.remove');
 
