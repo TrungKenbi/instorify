@@ -262,51 +262,21 @@
                                         <div id="searchDir">
                                         </div>
                                         <ul id="people-list" class="friendz-list">
+                                            @foreach(auth()->user()->getFriends(5) as $friend)
                                             <li>
                                                 <figure style="margin-left: -20px">
-                                                    <img src="/assets/img/sample_ava1.jpg" alt="" style="width: 90%">
-                                                    <span class="online"></span>
+                                                    <img src="{{ $friend->avatar_url }}" alt="" style="width: 90%">
+                                                    @if($friend->isOnline())
+                                                        <span class="online"></span>
+                                                    @else
+                                                        <span class="offline"></span>
+                                                    @endif
                                                 </figure>
                                                 <div class="friendz-meta" style="margin-left: 10px">
-                                                    <a href="#" style="color: black; "><b>Dương Lê Phước Trung</b></a>
+                                                    <a href="#" style="color: black; "><b>{{ $friend->fullname }}</b></a>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <figure style="margin-left: -20px">
-                                                    <img src="/assets/img/sample_ava2.jpg" alt="" style="width: 90%">
-                                                    <span class="online"></span>
-                                                </figure>
-                                                <div class="friendz-meta" style="margin-left: 10px">
-                                                    <a href="#" style="color: black; "><b>Tài Trần</b></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <figure style="margin-left: -20px">
-                                                    <img src="/assets/img/sample_ava3.jpg" alt="" style="width: 90%">
-                                                    <span class="offline"></span>
-                                                </figure>
-                                                <div class="friendz-meta" style="margin-left: 10px">
-                                                    <a href="#" style="color: black; "><b>Minh Nghĩa</b></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <figure style="margin-left: -20px">
-                                                    <img src="/assets/img/sample_ava4.jpg" alt="" style="width: 90%">
-                                                    <span class="offline"></span>
-                                                </figure>
-                                                <div class="friendz-meta" style="margin-left: 10px">
-                                                    <a href="#" style="color: black; "><b>Nguyễn Ngọc Minh</b></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <figure style="margin-left: -20px">
-                                                    <img src="/assets/img/sample_ava5.jpg" alt="" style="width: 90%">
-                                                    <span class="offline"></span>
-                                                </figure>
-                                                <div class="friendz-meta" style="margin-left: 10px">
-                                                    <a href="#" style="color: black; "><b>Đạt</b></a>
-                                                </div>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </aside>

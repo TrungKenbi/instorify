@@ -26,7 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::orderByRaw('RAND()')->limit(10)->get();
-        $recommendFriends = User::where('id', '!=', auth()->id())->orderByRaw('RAND()')->limit(10)->get();
+        $recommendFriends = auth()->user()->getFriendsOfFriends(10);
+        if (count($recommendFriends) == 0)
+            $recommendFriends = User::where('id', '!=', auth()->id())->orderByRaw('RAND()')->limit(5)->get();
         return view('home', compact('posts', 'recommendFriends'));
     }
 }

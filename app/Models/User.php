@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Cache;
 use Multicaret\Acquaintances\Traits\CanBeFollowed;
 use Multicaret\Acquaintances\Traits\CanFollow;
 use Multicaret\Acquaintances\Traits\Friendable;
@@ -112,5 +113,10 @@ class User extends Authenticatable
         return array_key_exists($this->relationship_status, $relationship_type) ?
             $relationship_type[$this->relationship_status] :
             $relationship_type['single'];
+    }
+
+    public function isOnline()
+    {
+        return Cache::has('user-is-online-' . $this->id);
     }
 }
