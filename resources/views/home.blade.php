@@ -151,11 +151,17 @@
                                                     <ul>
                                                         <li>
                                                             @if ($post->isUserReactedPost())
+                                                                @if ($post->reactions > 0)
+                                                                    <span>{{ $post->reactions }}</span>
+                                                                @endif
                                                                 <span class="like liked" data-toggle="tooltip" data-id="{{ $post->id }}"
                                                                       title="Yêu thích">
                                                                     <i class="fas fa-heart" style="color: red"></i>
                                                                 </span>
                                                             @else
+                                                                @if ($post->reactions > 0)
+                                                                    <span>{{ $post->reactions }}</span>
+                                                                @endif
                                                                 <span class="like" data-toggle="tooltip" data-id="{{ $post->id }}"
                                                                       title="Yêu thích">
                                                                     <i class="far fa-heart"></i>

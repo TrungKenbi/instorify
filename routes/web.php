@@ -25,6 +25,14 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('music', MusicController::class);
     Route::resource('posts.reactions', PostReactionController::class)->only(['store']);
     Route::resource('posts.comments', PostCommentController::class)->only(['store', 'edit', 'destroy']);
+
+
+
+    Route::get('users/friends/add/{id}', 'UserController@addFriend')->name('users.friends.add');
+    Route::get('users/friends/remove/{id}', 'UserController@unfriend')->name('users.friends.remove');
+
+    Route::get('users/friends/accept/{id}', 'UserController@acceptFriend')->name('users.friends.accept');
+    Route::get('users/friends/deny/{id}', 'UserController@denyFriend')->name('users.friends.deny');
 });
 
 

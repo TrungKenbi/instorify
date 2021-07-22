@@ -2,13 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Multicaret\Acquaintances\Traits\CanBeFollowed;
+use Multicaret\Acquaintances\Traits\CanFollow;
+use Multicaret\Acquaintances\Traits\Friendable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Friendable;
+    use CanFollow, CanBeFollowed;
 
     /**
      * The attributes that are mass assignable.

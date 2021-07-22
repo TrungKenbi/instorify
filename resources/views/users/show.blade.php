@@ -53,11 +53,30 @@
                             @endif
                         </li>
                         @if (Auth::id() !== $user->id)
-                        <li class="friend">
-                            <a name="add_friend" href="#" ><button><i class="fas fa-user-plus"></i> Kết bạn</button></a>
-                            <a name="friend" href="#" hidden><button><i class="fas fa-user-times" style="color: red"></i> Huỷ kết bạn</button></a>
-                            <a name="inbox" href="#" ><button><i class="fab fa-facebook-messenger"></i> Nhắn tin</button></a>
-                        </li>
+                            <li class="friend">
+                                @if (auth()->user()->isFriendWith($user))
+                                    <a name="friend" href="{{ route('users.friends.remove', $user->id) }}">
+                                        <button><i class="fas fa-user-times" style="color: red"></i> Huỷ kết bạn</button>
+                                    </a>
+                                @elseif (auth()->user()->hasSentFriendRequestTo($user))
+                                    <a name="friend" href="{{ route('users.friends.remove', $user->id) }}">
+                                        <button><i class="fas fa-user-times" style="color: red"></i> Huỷ yêu cầu</button>
+                                    </a>
+                                @elseif (auth()->user()->hasFriendRequestFrom($user))
+                                    <a name="add_friend" href="{{ route('users.friends.accept', $user->id) }}" >
+                                        <button><i class="fas fa-user-plus"></i> Đồng ý</button>
+                                    </a>
+                                    <a name="friend" href="{{ route('users.friends.deny', $user->id) }}">
+                                        <button><i class="fas fa-user-times" style="color: red"></i> Huỷ</button>
+                                    </a>
+                                @else
+                                    <a name="add_friend" href="{{ route('users.friends.add', $user->id) }}" >
+                                        <button><i class="fas fa-user-plus"></i> Kết bạn</button>
+                                    </a>
+                                @endif
+
+                                <a name="inbox" href="#" ><button><i class="fab fa-facebook-messenger"></i> Nhắn tin</button></a>
+                            </li>
                         @endif
                     </ul>
                 </div>
@@ -328,11 +347,17 @@
                                                     <ul>
                                                         <li>
                                                             @if ($post->isUserReactedPost())
+                                                                @if ($post->reactions > 0)
+                                                                <span>{{ $post->reactions }}</span>
+                                                                @endif
                                                                 <span class="like liked" data-toggle="tooltip" data-id="{{ $post->id }}"
                                                                       title="Yêu thích">
                                                                     <i class="fas fa-heart" style="color: red"></i>
                                                                 </span>
                                                             @else
+                                                                @if ($post->reactions > 0)
+                                                                    <span>{{ $post->reactions }}</span>
+                                                                @endif
                                                                 <span class="like" data-toggle="tooltip" data-id="{{ $post->id }}"
                                                                       title="Yêu thích">
                                                                     <i class="far fa-heart"></i>
