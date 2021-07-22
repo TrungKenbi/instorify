@@ -15,6 +15,8 @@ class CreateConversationsTable extends Migration
     {
         Schema::create('conversations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name')->nullable();
+            $table->enum('type', ['private', 'public'])->default('private');
             $table->timestamps();
         });
     }
