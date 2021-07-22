@@ -25,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // dd(auth()->user()->conversations->first()->messages);
+
         $posts = Post::orderByRaw('RAND()')->limit(10)->get();
         $recommendFriends = auth()->user()->getFriendsOfFriends(10);
         if (count($recommendFriends) == 0)

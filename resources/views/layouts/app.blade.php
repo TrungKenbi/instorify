@@ -88,5 +88,8 @@
 <script src="/assets/js/home/main.js"></script>
 <script src="/assets/js/script.js"></script>
 {{--<script src="/assets/js/music.js"></script>--}}
+
+@stack('scripts')
+
 </body>
 </html>

@@ -1827,7 +1827,7 @@ for some reason nth-child(1) is always busy and elements starting from 2 */
 }
 
 .we-comment::before,
-.peoples-mesg-box > ul > li p:before {
+.peoples-mesg-box > div > ul > li p:before {
     border-bottom: 10px solid transparent;
     border-right: 11px solid #ede9e9;
     border-top: 10px solid transparent;
@@ -1838,7 +1838,7 @@ for some reason nth-child(1) is always busy and elements starting from 2 */
 }
 
 .we-comment::after,
-.peoples-mesg-box > ul > li p:after {
+.peoples-mesg-box > div > ul > li p:after {
     border-bottom: 8px solid transparent;
     border-right: 9px solid #fff;
     border-top: 8px solid transparent;
@@ -4161,7 +4161,7 @@ a.forgot-pwd {
     padding-left: 15px;
 }
 
-.peoples-mesg-box > ul.chatting-area {
+.peoples-mesg-box > div > ul.chatting-area {
     display: inline-block;
     list-style: outside none none;
     margin-bottom: 0;
@@ -4172,13 +4172,13 @@ a.forgot-pwd {
     overflow-x: hidden;
 }
 
-.peoples-mesg-box > ul li {
+.peoples-mesg-box > div > ul li {
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
 }
 
-.peoples-mesg-box > ul li > figure {
+.peoples-mesg-box > div > ul li > figure {
     display: inline-block;
     margin-bottom: 0;
     max-width: 32px;
@@ -4187,7 +4187,7 @@ a.forgot-pwd {
     vertical-align: top;
 }
 
-.peoples-mesg-box > ul > li p {
+.peoples-mesg-box > div > ul > li p {
     display: inline-block;
     font-size: 14px;
     line-height: initial;
@@ -4202,40 +4202,40 @@ a.forgot-pwd {
     border-radius: 15px;
 }
 
-.peoples-mesg-box > ul > li p::before {
+.peoples-mesg-box > div > ul > li p::before {
     top: 4px;
     border-color: transparent;
 }
 
-.peoples-mesg-box > ul > li p::after {
+.peoples-mesg-box > div > ul > li p::after {
     top: 6px;
     border-right-color: rgba(202, 239, 142, .65);
 }
 
-.peoples-mesg-box > ul > li.me p::before {
+.peoples-mesg-box > div > ul > li.me p::before {
     border-left: 11px solid transparent;
     border-right: initial;
     left: auto;
     right: -11px;
 }
 
-.peoples-mesg-box > ul > li.you p {
+.peoples-mesg-box > div > ul > li.you p {
     background: rgba(202, 239, 142, .65);
 }
 
-.peoples-mesg-box > ul > li.me p::after {
+.peoples-mesg-box > div > ul > li.me p::after {
     border-left: 10px solid rgba(39, 170, 225, 0.1);
     border-right: initial;
     left: auto;
     right: -10px;
 }
 
-.peoples-mesg-box > ul li.me {
+.peoples-mesg-box > div > ul li.me {
     direction: rtl;
     text-align: right;
 }
 
-.peoples-mesg-box > ul li.me p {
+.peoples-mesg-box > div > ul li.me p {
     margin-left: 0;
     margin-right: 10px;
     text-align: left;
@@ -4699,7 +4699,7 @@ canvas {
 .nearly-pepls > figure img,
 .peoples > li figure img,
 .conversation-head > figure img,
-.peoples-mesg-box > ul li > figure img,
+.peoples-mesg-box > div > ul li > figure img,
 .your-page > figure img,
 .notification-box > ul li figure img {
     border-radius: 100%;

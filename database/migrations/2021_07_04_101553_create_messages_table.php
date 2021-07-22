@@ -20,17 +20,17 @@ class CreateMessagesTable extends Migration
             $table->text('message');
             $table->timestamps();
 
-            $table->foreign('conversation_id')
-                ->references('id')
-                ->on('conversations')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+//            $table->foreign('conversation_id')
+//                ->references('id')
+//                ->on('conversations')
+//                ->onUpdate('cascade')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('user_id')
+//                ->references('id')
+//                ->on('users')
+//                ->onUpdate('cascade')
+//                ->onDelete('cascade');
         });
     }
 

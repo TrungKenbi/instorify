@@ -53,6 +53,15 @@ class User extends Authenticatable
         return $this->hasMany(Post::class)->orderBy('id', 'DESC');
     }
 
+
+    /**
+     * Get the conversations for the user
+     */
+    public function conversations()
+    {
+        return $this->belongsToMany(Conversation::class, 'participants', 'user_id', 'conversation_id');
+    }
+
     /**
      * Get fullname
      *

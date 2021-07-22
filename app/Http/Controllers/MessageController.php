@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Message;
+use App\Models\Conversation;
+use App\Models\Message;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -14,7 +16,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        return view('messages.index');
     }
 
     /**
@@ -35,7 +37,12 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $message = Message::create([
+            'conversation_id' => $request->get('conversation_id'),
+            'user_id' => auth()->id(),
+            'message' => $request->get('message')
+        ]);
+        $message->save();
     }
 
     /**
@@ -44,9 +51,24 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Message $message)
+    public function show(Conversation $message)
     {
-        //
+        $conversation = $message;
+
+        $user = $conversation->users()->where('users.id', '!=', auth()->id())->first();
+
+        $profile = (object)[
+            'id' => $user->id,
+            'avatar_url' => $user->avatar_url,
+            'fullname' => $user->full_name,
+            'is_online' => $user->isOnline()
+        ];
+
+        $messages = $conversation->messages()->limit(100)->get([
+            'user_id', 'message', 'created_at'
+        ]);
+
+        return response()->json(compact('profile', 'messages'));
     }
 
     /**

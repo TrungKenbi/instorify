@@ -26,6 +26,8 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('posts.reactions', PostReactionController::class)->only(['store']);
     Route::resource('posts.comments', PostCommentController::class)->only(['store', 'edit', 'destroy']);
 
+    Route::resource('messages', MessageController::class);
+
 
     Route::get('profile/{user}', 'ProfileController@index')->name('profile.index');
     Route::get('profile/{user}/friends', 'ProfileController@friends')->name('profile.friends');
@@ -60,9 +62,9 @@ Route::get('/edituser', function () {
     return view('edituser');
 });
 
-Route::get('/messages', function () {
-    return view('messages');
-});
+//Route::get('/messages', function () {
+//    return view('messages');
+//});
 
 Route::get('/notifications', function () {
     return view('notifications');
