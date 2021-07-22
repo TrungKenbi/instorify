@@ -51,11 +51,11 @@
                 <div class="timeline-info">
                     <ul>
                         <li>
-                            <a class="active" href="/profile" title="" data-ripple="">Bài viết</a>
-                            <a class="" href="{{ route('profile.friends', $user->id) }}" title="" data-ripple="">Bạn bè</a>
-                            <a class="" href="/profile_photos" title="" data-ripple="">Ảnh</a>
-                            <a class="" href="/profile_music" title="" data-ripple="">Bài hát</a>
-                            <a class="" href="/profile_videos" title="" data-ripple="">Video</a>
+                            <a {{url()->current() == route('profile.index', $user->id) ? 'class="active"' : ''}} href="{{ route('profile.index', $user->id) }}" title="" data-ripple="">Bài viết</a>
+                            <a {{url()->current() == route('profile.friends', $user->id) ? 'class="active"' : ''}} href="{{ route('profile.friends', $user->id) }}" title="" data-ripple="">Bạn bè</a>
+                            <a {{url()->current() == route('profile.photos', $user->id) ? 'class="active"' : ''}} href="{{ route('profile.photos', $user->id) }}" title="" data-ripple="">Ảnh</a>
+                            <a {{url()->current() == route('profile.music', $user->id) ? 'class="active"' : ''}} href="{{ route('profile.music', $user->id) }}" title="" data-ripple="">Bài hát</a>
+                            <a {{url()->current() == route('profile.videos', $user->id) ? 'class="active"' : ''}} href="{{ route('profile.videos', $user->id) }}" title="" data-ripple="">Video</a>
                             @if (Auth::id() === $user->id)
                                 <a href="{{ route('profile.edit', auth()->id()) }}" class="edit-user" title="" data-ripple="">
                                     <button><i class="fas fa-user-edit"></i> Chỉnh sửa trang cá nhân</button>
@@ -166,11 +166,12 @@
                                 </aside>
                                 <aside class="sidebar static">
                                     <div class="widget">
+                                        @php($photos = $user->posts()->with('photos')->get()->pluck('photos')->flatten())
                                         <h4 class="widget-title">Ảnh</h4>
                                         <ul class="naves">
                                             <li>
                                                 <div class="row" style="margin-top: -10px">
-                                                    @foreach($user->posts()->with('photos')->limit(9)->get()->pluck('photos')->flatten() as $photo)
+                                                    @foreach($photos->slice(0, 9) as $photo)
                                                     <div class="col-lg-4" style="margin-top: 10px">
                                                         <img src="{{ asset($photo->url) }}" style="width: 70px; height: 70px; border-radius: 10px">
                                                     </div>
@@ -178,9 +179,11 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <div style="text-align: center; margin-bottom: 10px">
-                                            <a href="#"><p class="see-all">Xem tất cả</p></a>
-                                        </div>
+                                        @if (count($photos) > 9)
+                                            <div style="text-align: center; margin-bottom: 10px">
+                                                <a href="{{ route('profile.photos', $user->id) }}"><p class="see-all">Xem tất cả</p></a>
+                                            </div>
+                                        @endif
                                     </div><!-- Shortcuts -->
                                 </aside>
                                 <aside class="sidebar static">

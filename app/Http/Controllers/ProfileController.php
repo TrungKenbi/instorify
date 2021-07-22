@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Photo;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
@@ -23,6 +22,19 @@ class ProfileController extends Controller
 
     public function friends(User $user) {
         return view('profile.friends', compact('user'));
+    }
+
+    public function photos(User $user) {
+        return view('profile.photos', compact('user'));
+    }
+
+    public function music(User $user) {
+        return view('profile.music', compact('user'));
+    }
+
+    public function videos(User $user)
+    {
+        return view('profile.videos', compact('user'));
     }
 
     public function edit(User $user)

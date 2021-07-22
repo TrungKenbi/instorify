@@ -42,13 +42,13 @@
                                             <li>
                                                 <i class="fas fa-photo-video" style="color: #5271ff"></i>
                                                 <label class="fileContainer">
-                                                    <input type="file" name="photos[]" accept="image/png, image/jpg, image/jpeg, video/mp4">
+                                                    <input type="file" name="photos[]" accept="image/png, image/jpg, image/jpeg, video/mp4" multiple="multiple">
                                                 </label>
                                             </li>
                                             <li>
                                                 <i class="fas fa-music" style="color: #5271ff"></i>
                                                 <label class="fileContainer">
-                                                    <input type="file" name="music[]" accept="audio/mp3, audio/m4a">
+                                                    <input type="file" name="music[]" accept="audio/mp3, audio/m4a" >
                                                 </label>
                                             </li>
                                         </ul>
