@@ -62,6 +62,18 @@ class User extends Authenticatable
         return $this->belongsToMany(Conversation::class, 'participants', 'user_id', 'conversation_id');
     }
 
+
+    public function notificationsFrom()
+    {
+        return $this->hasMany(Notification::class, 'from')->orderBy('id', 'DESC');
+    }
+
+
+    public function notificationsTo()
+    {
+        return $this->hasMany(Notification::class, 'to')->orderBy('id', 'DESC');
+    }
+
     /**
      * Get fullname
      *

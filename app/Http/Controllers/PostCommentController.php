@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notification;
+use App\Models\Post;
 use App\Models\PostComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +29,18 @@ class PostCommentController extends Controller
             'content' => $request->get('content'),
         ]);
         $comment->save();
+
+        // Thông báo tới người ta :3
+        $notiUserId = Post::find($postId)->user->id;
+        if (auth()->id() != $notiUserId) {
+            $notification = Notification::create([
+                'from' => auth()->id(),
+                'to' => $notiUserId,
+                'type' => 'comment',
+                'content' => 'đã bình luận tới bài viết của bạn'
+            ]);
+            $notification->save();
+        }
 
         return response()->json([
             'status' => 'success',

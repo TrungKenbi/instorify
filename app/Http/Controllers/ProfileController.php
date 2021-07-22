@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notification;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -98,6 +99,17 @@ class ProfileController extends Controller
 
         auth()->user()->befriend($user);
 
+        // Thông báo tới người ta :3
+        if (auth()->id() != $user->id) {
+            $notification = Notification::create([
+                'from' => auth()->id(),
+                'to' => $user->id,
+                'type' => 'add-friend',
+                'content' => 'đã gửi yêu cầu kết bạn'
+            ]);
+            $notification->save();
+        }
+
         return redirect()->back();
     }
 
@@ -119,6 +131,16 @@ class ProfileController extends Controller
             return redirect()->back()->with('error', 'Người dùng không tồn tại!');
 
         auth()->user()->acceptFriendRequest($user);
+        // Thông báo tới người ta :3
+        if (auth()->id() != $user->id) {
+            $notification = Notification::create([
+                'from' => auth()->id(),
+                'to' => $user->id,
+                'type' => 'accept-friend-request',
+                'content' => 'đã đồng ý kết bạn'
+            ]);
+            $notification->save();
+        }
 
         return redirect()->back();
     }

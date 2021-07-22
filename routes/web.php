@@ -27,6 +27,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('posts.comments', PostCommentController::class)->only(['store', 'edit', 'destroy']);
 
     Route::resource('messages', MessageController::class);
+    Route::resource('notifications', NotificationController::class);
 
 
     Route::get('profile/{user}', 'ProfileController@index')->name('profile.index');
@@ -48,48 +49,4 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::get('profile/friends/deny/{id}', 'ProfileController@denyFriend')->name('profile.friends.deny');
 });
 
-
-
-
-
-
-/**
- * UI temporary routes
- */
-
-//Route::get('/', function () {
-//    return view('landing');
-//});
-
 Route::get('/home', 'HomeController@index');
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-Route::get('/edituser', function () {
-    return view('edituser');
-});
-
-//Route::get('/messages', function () {
-//    return view('messages');
-//});
-
-Route::get('/notifications', function () {
-    return view('notifications');
-});
-
-Route::get('/profile_photos', function () {
-    return view('profile_photos');
-});
-
-Route::get('/profile_videos', function () {
-    return view('profile_videos');
-});
-
-Route::get('/profile_music', function () {
-    return view('profile_music');
-});
-Route::get('/profile_friends', function () {
-    return view('profile_friends');
-});

@@ -79,54 +79,35 @@
                                         <div class="dropdown-title">
                                             <p class="recent-msg">Thông báo</p>
                                         </div>
+                                        @forelse(auth()->user()->notificationsTo()->limit(5)->get() as $notification)
                                         <ul class="dropdown-msg-list">
                                             <li class="msg-list-item d-flex justify-content-between">
                                                 <!-- profile picture -->
                                                 <div class="profile-thumb">
                                                     <figure class="profile-thumb-middle">
-                                                        <img src="/assets/img/sample_ava1.jpg" alt="profile picture">
+                                                        <img src="{{ $notification->fromUser->avatar_url }}" alt="profile picture">
                                                     </figure>
                                                 </div>
 
                                                 <!-- message content -->
                                                 <div class="msg-content notification-content">
-                                                    <a href="#" class="author" style="text-decoration: none">
-                                                        <strong>Dương Lê Phước Trung</strong> và những người khác
+                                                    <a href="{{ route('profile.index', $notification->fromUser->id) }}" class="author" style="text-decoration: none">
+                                                        <strong>{{ $notification->fromUser->full_name }}</strong>
                                                     </a>
                                                     <p class="msg-property">
-                                                        Đã thích ảnh của bạn.
+                                                        {{ $notification->content }}
                                                     </p>
                                                 </div>
 
                                                 <!-- message time -->
                                                 <div class="msg-time">
-                                                    <p>08 Jul 2021</p>
+                                                    <p>{{ Carbon\Carbon::parse($notification->created_at)->diffForHumans() }}</p>
                                                 </div>
                                             </li>
                                         </ul>
-                                        <ul class="dropdown-msg-list">
-                                            <li class="msg-list-item d-flex justify-content-between">
-                                                <!-- profile picture -->
-                                                <div class="profile-thumb">
-                                                    <figure class="profile-thumb-middle">
-                                                        <img src="/assets/img/sample_ava2.jpg" alt="profile picture">
-                                                    </figure>
-                                                </div>
-
-                                                <!-- message content -->
-                                                <div class="msg-content notification-content">
-                                                    <h6 class="author"><a href="#" style="text-decoration: none">Tài Trần</a></h6>
-                                                    <p class="msg-property">
-                                                        Đã bình luận vào bài viết của bạn.
-                                                    </p>
-                                                </div>
-
-                                                <!-- message time -->
-                                                <div class="msg-time">
-                                                    <p>08 Jul 2021</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        @empty
+                                            <p class="text-center">Không có thông báo nào</p>
+                                        @endforelse
                                         <ul id="all-notification">
                                             <a href="/notifications" style="text-decoration: none; font-size: 14px">Xem tất cả Thông Báo</a>
                                         </ul>
