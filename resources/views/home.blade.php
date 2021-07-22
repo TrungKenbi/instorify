@@ -108,11 +108,11 @@
                                             <div class="friend-info">
                                                 <!-- POST INFO PART -->
                                                 <figure>
-                                                    <a href="{{ route('users.show', $post->user->id) }}"><img src="{{ $post->user->avatar_url }}" alt="profile picture"
+                                                    <a href="{{ route('profile.index', $post->user->id) }}"><img src="{{ $post->user->avatar_url }}" alt="profile picture"
                                                                             style="width: 80%"></a>
                                                 </figure>
                                                 <div class="friend-name">
-                                                    <ins><a href="{{ route('users.show', $post->user->id) }}" title="">
+                                                    <ins><a href="{{ route('profile.index', $post->user->id) }}" title="">
                                                             {{ $post->user->fullname }}</a>
                                                         @if ($post->user->is_admin)
                                                             <span class="blue-tick-small"><i class="fas fa-check-circle"></i></span>

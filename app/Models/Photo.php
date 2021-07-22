@@ -31,4 +31,12 @@ class Photo extends Model
      */
     protected $casts = [
     ];
+
+    /**
+     * Get the post that owns the photo.
+     */
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }

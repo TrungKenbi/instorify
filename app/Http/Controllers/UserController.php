@@ -84,49 +84,4 @@ class UserController extends Controller
     {
         //
     }
-
-
-    public function addFriend($userId) {
-        $user = User::find($userId);
-
-        if (!$user)
-            return redirect()->back()->with('error', 'Người dùng không tồn tại!');
-
-        auth()->user()->befriend($user);
-
-        return redirect()->back();
-    }
-
-    public function unfriend($userId) {
-        $user = User::find($userId);
-
-        if (!$user)
-            return redirect()->back()->with('error', 'Người dùng không tồn tại!');
-
-        auth()->user()->unfriend($user);
-
-        return redirect()->back();
-    }
-
-    public function acceptFriend($userId) {
-        $user = User::find($userId);
-
-        if (!$user)
-            return redirect()->back()->with('error', 'Người dùng không tồn tại!');
-
-        auth()->user()->acceptFriendRequest($user);
-
-        return redirect()->back();
-    }
-
-    public function denyFriend($userId) {
-        $user = User::find($userId);
-
-        if (!$user)
-            return redirect()->back()->with('error', 'Người dùng không tồn tại!');
-
-        auth()->user()->denyFriendRequest($user);
-
-        return redirect()->back();
-    }
 }

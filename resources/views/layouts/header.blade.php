@@ -160,12 +160,12 @@
                                 </a>
                                 <div class="profile-dropdown">
                                     <div class="profile-head">
-                                        <h5 class="name"><a href="{{ route('users.show', auth()->id()) }}">{{ Auth::user()->fullname }}</a></h5>
-                                        <a class="mail" href="{{ route('users.show', auth()->id()) }}">{{ Auth::user()->username }}</a>
+                                        <h5 class="name"><a href="{{ route('profile.index', auth()->id()) }}">{{ Auth::user()->fullname }}</a></h5>
+                                        <a class="mail" href="{{ route('profile.index', auth()->id()) }}">{{ Auth::user()->username }}</a>
                                     </div>
                                     <div class="profile-body">
                                         <ul>
-                                            <li><a href="{{ route('users.show', auth()->id()) }}"><i class="fas fa-user" style="font-size: 16px; color: #5271ff"></i>Trang cá nhân</a></li>
+                                            <li><a href="{{ route('profile.index', auth()->id()) }}"><i class="fas fa-user" style="font-size: 16px; color: #5271ff"></i>Trang cá nhân</a></li>
                                             <li><a href="#"><i class="fas fa-cog" style="font-size: 16px; color: #5271ff"></i>Cài đặt</a></li>
                                             <li><a href="{{ route('logout') }}"><i class="fas fa-sign-out-alt" style="font-size: 16px; color: #5271ff"></i>Đăng xuất</a></li>
                                         </ul>

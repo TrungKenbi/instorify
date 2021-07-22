@@ -27,12 +27,14 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('posts.comments', PostCommentController::class)->only(['store', 'edit', 'destroy']);
 
 
+    Route::get('profile/{user}', 'ProfileController@index')->name('profile.index');
+    Route::get('profile/{user}/friends', 'ProfileController@friends')->name('profile.friends');
 
-    Route::get('users/friends/add/{id}', 'UserController@addFriend')->name('users.friends.add');
-    Route::get('users/friends/remove/{id}', 'UserController@unfriend')->name('users.friends.remove');
+    Route::get('profile/friends/add/{id}', 'ProfileController@addFriend')->name('profile.friends.add');
+    Route::get('profile/friends/remove/{id}', 'ProfileController@unfriend')->name('profile.friends.remove');
 
-    Route::get('users/friends/accept/{id}', 'UserController@acceptFriend')->name('users.friends.accept');
-    Route::get('users/friends/deny/{id}', 'UserController@denyFriend')->name('users.friends.deny');
+    Route::get('profile/friends/accept/{id}', 'ProfileController@acceptFriend')->name('profile.friends.accept');
+    Route::get('profile/friends/deny/{id}', 'ProfileController@denyFriend')->name('profile.friends.deny');
 });
 
 

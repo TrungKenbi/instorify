@@ -76,7 +76,7 @@ class PostController extends Controller
             }
         });
 
-        return redirect(route('users.show', Auth::id()))->with('success', 'Đăng bài thành công!');
+        return redirect(route('profile.index', Auth::id()))->with('success', 'Đăng bài thành công!');
     }
 
     /**

@@ -96,4 +96,21 @@ class User extends Authenticatable
         ];
         return $genders[$this->gender];
     }
+
+    /**
+     * Get gender text
+     *
+     * @return string
+     */
+    public function getRStatusAttribute()
+    {
+        $relationship_type = [
+            'single' => 'Độc thân',
+            'in_relationship' => 'Đang hẹn hò',
+            'married' => 'Đã kết hôn'
+        ];
+        return array_key_exists($this->relationship_status, $relationship_type) ?
+            $relationship_type[$this->relationship_status] :
+            $relationship_type['single'];
+    }
 }
