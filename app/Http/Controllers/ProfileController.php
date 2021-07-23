@@ -91,6 +91,14 @@ class ProfileController extends Controller
         return redirect()->back();
     }
 
+    public function changePassword(Request $request) {
+        return view('profile.password');
+    }
+
+    public function changePassswordHandle(Request $request) {
+        return redirect()->back();
+    }
+
     public function addFriend($userId) {
         $user = User::find($userId);
 

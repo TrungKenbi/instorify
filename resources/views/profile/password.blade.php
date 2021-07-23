@@ -11,7 +11,8 @@
                                 <div class="central-meta">
                                     <div class="editing-info">
                                         <h5 class="f-title"><i class="fas fa-unlock-alt" style="font-size: 26px"></i>Đổi mật khẩu</h5>
-                                        <form method="post" action="{{ route('profile.changePassswordHandle') }}">
+                                        <form method="post" action="{{ route('profile.passwordHandle') }}">
+                                            @csrf
                                             <div class="form-group">
                                                 <input type="text" name="email" required="required" value="{{ auth()->user()->email }}"/>
                                                 <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>

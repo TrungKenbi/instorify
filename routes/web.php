@@ -29,6 +29,8 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('messages', MessageController::class);
     Route::resource('notifications', NotificationController::class);
 
+    Route::get('profile/password', 'ProfileController@changePassword')->name('profile.password');
+    Route::post('profile/password', 'ProfileController@changePassswordHandle')->name('profile.passwordHandle');
 
     Route::get('profile/{user}', 'ProfileController@index')->name('profile.index');
     Route::get('profile/{user}/friends', 'ProfileController@friends')->name('profile.friends');
@@ -47,6 +49,8 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     Route::get('profile/friends/accept/{id}', 'ProfileController@acceptFriend')->name('profile.friends.accept');
     Route::get('profile/friends/deny/{id}', 'ProfileController@denyFriend')->name('profile.friends.deny');
+
+
 });
 
 Route::get('/home', 'HomeController@index');

@@ -21,7 +21,11 @@
                                                         <a href="#" title="" class="underline">{{ $friend->home_town }}</a>
                                                     </div>
                                                     <div style="margin-left: 200px; margin-top: -50px">
-                                                        <button><i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i></button>
+                                                        <a href="{{ route('profile.friends.add', $friend->id) }}">
+                                                            <button>
+                                                                <i class="fas fa-user-plus" style="color: #5271ff; font-size: 20px"></i>
+                                                            </button>
+                                                        </a>
                                                     </div>
                                                 </li>
                                             @endforeach
