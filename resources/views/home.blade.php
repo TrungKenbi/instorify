@@ -198,7 +198,7 @@
                                                 <div class="coment-area">
                                                     <hr style="margin-top: -10px; width: 96%">
                                                     <ul class="we-comet">
-                                                        @foreach($post->comments()->limit(20)->get() as $comment)
+                                                        @foreach($post->comments() as $comment)
                                                             <li>
                                                                 <div class="comet-avatar">
                                                                     <img src="{{ $comment->user->avatar_url }}" alt="">

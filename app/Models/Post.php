@@ -67,9 +67,18 @@ class Post extends Model
         return $this->hasMany(PostReaction::class);
     }
 
+    public function reactionss()
+    {
+        return $this->hasMany(PostReaction::class);
+    }
+
     public function isUserReactedPost()
     {
-        return $this->reactions()->where('user_id', auth()->id())->exists();
+        // return $this->reactions()->where('user_id', auth()->id())->exists();
+        foreach ($this->reactionss as $reaction)
+            if ($reaction->user_id == auth()->id())
+                return true;
+        return false;
     }
 
     /**

@@ -79,7 +79,7 @@
                                         <div class="dropdown-title">
                                             <p class="recent-msg">Thông báo</p>
                                         </div>
-                                        @forelse(auth()->user()->notificationsTo()->limit(5)->get() as $notification)
+                                        @forelse(auth()->user()->notificationsTo()->with('fromUser')->limit(5)->get() as $notification)
                                         <ul class="dropdown-msg-list">
                                             <li class="msg-list-item d-flex justify-content-between">
                                                 <!-- profile picture -->
