@@ -17,7 +17,7 @@
                                                 <li style="margin-top: 20px">
                                                     <figure><img src="{{ $friend->avatar_url }}" alt=" " style="width: 100%; margin-left: -0px"></figure>
                                                     <div class="friend-meta">
-                                                        <h4><a href="time-line.html" title="">{{ $friend->fullname }}</a></h4>
+                                                        <h4><a href="{{ route('profile.index', $friend->id) }}" title="">{{ $friend->fullname }}</a></h4>
                                                         <a href="#" title="" class="underline">{{ $friend->home_town }}</a>
                                                     </div>
                                                     <div style="margin-left: 200px; margin-top: -50px">
