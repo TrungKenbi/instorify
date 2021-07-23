@@ -50,3 +50,4 @@ Route::middleware(['web', 'auth'])->group(function () {
 });
 
 Route::get('/home', 'HomeController@index');
+

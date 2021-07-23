@@ -147,7 +147,7 @@
                                     <div class="profile-body">
                                         <ul>
                                             <li><a href="{{ route('profile.index', auth()->id()) }}"><i class="fas fa-user" style="font-size: 16px; color: #5271ff"></i>Trang cá nhân</a></li>
-                                            <li><a href="#"><i class="fas fa-cog" style="font-size: 16px; color: #5271ff"></i>Cài đặt</a></li>
+                                            <li><a href="#"><i class="fas fa-cog" style="font-size: 16px; color: #5271ff"></i>Đổi mật khẩu</a></li>
                                             <li><a href="{{ route('logout') }}"><i class="fas fa-sign-out-alt" style="font-size: 16px; color: #5271ff"></i>Đăng xuất</a></li>
                                         </ul>
                                     </div>

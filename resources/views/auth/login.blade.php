@@ -28,7 +28,7 @@
                         <div class="friend-logo">
                             <span><img src="/assets/img/logo3.png" alt="Logo" style="width: 50%"></span>
                         </div>
-                        <p style="color: black">Made by TrungKenbi && xxTMHxx with &#10084;&#65039;</p>
+                        <p style="color: black">Made by Phước Trung && Minh Hiếu with &#10084;&#65039;</p>
                     </div>
                 </div>
             </div>
